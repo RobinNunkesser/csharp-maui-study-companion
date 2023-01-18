@@ -6,10 +6,23 @@
     xmlns:local="clr-namespace:StudyCompanion"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="{local:Localize Mensa}" Icon="mensa">
+            <ShellContent ContentTemplate="{DataTemplate local:MensaPage}" />
+        </Tab>
+        <Tab Title="{local:Localize Quiz}" Icon="quiz">
+            <ShellContent ContentTemplate="{DataTemplate local:QuizPage}" />
+        </Tab>
+        <Tab Title="{local:Localize Courses}" Icon="courses">
+            <ShellContent ContentTemplate="{DataTemplate local:CoursesPage}" />
+        </Tab>
+        <Tab Title="{local:Localize Profs}" Icon="profs">
+            <ShellContent ContentTemplate="{DataTemplate local:ProfsPage}" />
+        </Tab>
+        <Tab Title="{local:Localize Settings}" Icon="settings">
+            <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
+        </Tab>
+    </TabBar>
 
 </Shell>
 
