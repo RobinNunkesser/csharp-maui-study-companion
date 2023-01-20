@@ -2,9 +2,9 @@
 
 namespace StudyCompanion.Ports
 {
-    public class Class1
+    public interface IQuestion
     {
-
+        string Text { get; set; }
     }
 }
 

@@ -7,10 +7,43 @@
         <ToolbarItem IconImageSource="statistics" 
                      Clicked="Statistics_Clicked" />
     </ContentPage.ToolbarItems>
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.ColumnSpan="2" 
+                   Text="{Binding Question}" HorizontalOptions="Center" 
+                   VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="1" Grid.ColumnSpan="2" 
+                   x:Name="answerLabel" Text="{Binding Answer}" HorizontalOptions="Center" 
+                   VerticalOptions="Center" Opacity="0" />
+            <Button Grid.Row="2" Grid.Column="0" 
+                    x:Name="falseButton" Text="Falsch" HorizontalOptions="CenterAndExpand" 
+                    Clicked="Answer_Clicked"
+                    Command="{Binding AnswerCommand}">
+                <Button.CommandParameter>
+                    <x:Boolean>False</x:Boolean>
+                </Button.CommandParameter>
+            </Button>
+            <Button Grid.Row="2" Grid.Column="1" 
+                    x:Name="trueButton" Text="Richtig" HorizontalOptions="CenterAndExpand" 
+                    Clicked="Answer_Clicked"
+                    Command="{Binding AnswerCommand}">
+                <Button.CommandParameter>
+                    <x:Boolean>True</x:Boolean>
+                </Button.CommandParameter>
+            </Button>
+            <Button Grid.Row="3" Grid.ColumnSpan="2" 
+                    x:Name="skipButton" Text="Überspringen" HorizontalOptions="Center" VerticalOptions="End" 
+                    Command="{Binding SkipCommand}"/>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

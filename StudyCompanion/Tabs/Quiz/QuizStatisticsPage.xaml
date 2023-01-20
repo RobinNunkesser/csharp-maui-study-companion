@@ -3,10 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StudyCompanion.QuizStatisticsPage"
              Title="QuizStatisticsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ContentPage.Content>
+        <Grid RowSpacing="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="1" Grid.Column="0" 
+                   Text="Bearbeitete Fragen" HorizontalOptions="StartAndExpand"/>
+            <Label Grid.Row="1" Grid.Column="1" 
+                   Text="{Binding AnsweredQuestions}" HorizontalOptions="End"/>
+            <Label Grid.Row="2" Grid.Column="0"
+                   Text="Richtig beantwortet" HorizontalOptions="StartAndExpand"/>
+            <Label Grid.Row="2" Grid.Column="1"
+                   Text="{Binding CorrectAnswers}" HorizontalOptions="End"/>
+            <Label Grid.Row="3" Grid.Column="0" 
+                   Text="Falsch beantwortet" HorizontalOptions="StartAndExpand"/>
+            <Label Grid.Row="3" Grid.Column="1" 
+                   Text="{Binding WrongAnswers}" HorizontalOptions="End"/>
+            <Label Grid.Row="4" Grid.Column="0"
+                   Text="Übersprungen" HorizontalOptions="StartAndExpand"/>
+            <Label Grid.Row="4" Grid.Column="1"
+                   Text="{Binding SkippedQuestions}" HorizontalOptions="End"/>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

@@ -31,25 +31,18 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg"
-			ForegroundFile="Resources\AppIcon\appiconfg.svg"
-			Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg"
-			Color="#512BD4"
-			BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiFont Include="Resources\Fonts\*" />
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
-		<MauiAsset Include="Resources\Raw\**"
-			LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug"
-			Version="7.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Localization"
-			Version="7.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.2" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Remove="Resources\Strings\" />
@@ -133,9 +126,11 @@
 		<BundleResource Include="Resources\Raw\acknowledgements.html" />
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' "
-			Update="Resources\Strings\AppResources.Designer.cs">
+		<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Resources\Strings\AppResources.Designer.cs">
 			<DependentUpon>AppResources.resx</DependentUpon>
 		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\StudyCompanion.Ports\StudyCompanion.Ports.csproj" />
 	</ItemGroup>
 </Project>

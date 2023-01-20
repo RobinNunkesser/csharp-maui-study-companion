@@ -2,8 +2,9 @@
 
 public partial class QuizStatisticsPage : ContentPage
 {
-    public QuizStatisticsPage()
+    public QuizStatisticsPage(object bindingContext)
     {
         InitializeComponent();
+        BindingContext = bindingContext;
     }
 }
