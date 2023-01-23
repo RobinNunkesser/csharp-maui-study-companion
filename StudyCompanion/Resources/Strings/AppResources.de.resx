@@ -12,376 +12,283 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="Networks"
-		xml:space="preserve">
+	<data name="Networks" xml:space="preserve">
     <value>Netzwerke</value>
   </data>
-	<data name="OperatingSystems"
-		xml:space="preserve">
+	<data name="OperatingSystems" xml:space="preserve">
     <value>Betriebssysteme</value>
   </data>
-	<data name="Bitencodings"
-		xml:space="preserve">
+	<data name="Bitencodings" xml:space="preserve">
     <value>Bitcodierungen</value>
   </data>
-	<data name="PageReplacement"
-		xml:space="preserve">
+	<data name="PageReplacement" xml:space="preserve">
     <value>Seitenersetzung</value>
   </data>
-	<data name="Exercises"
-		xml:space="preserve">
+	<data name="Exercises" xml:space="preserve">
     <value>Übungen</value>
   </data>
-	<data name="NewValues"
-		xml:space="preserve">
+	<data name="NewValues" xml:space="preserve">
     <value>Neue Werte</value>
   </data>
-	<data name="Requests"
-		xml:space="preserve">
+	<data name="Requests" xml:space="preserve">
     <value>Folge</value>
   </data>
-	<data name="ShowSolution"
-		xml:space="preserve">
+	<data name="ShowSolution" xml:space="preserve">
     <value>Lösung anzeigen</value>
   </data>
-	<data name="Settings"
-		xml:space="preserve">
+	<data name="Settings" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
-	<data name="Profs"
-		xml:space="preserve">
+	<data name="Profs" xml:space="preserve">
     <value>Profs</value>
   </data>
-	<data name="Mensa"
-		xml:space="preserve">
+	<data name="Mensa" xml:space="preserve">
     <value>Mensa</value>
   </data>
-	<data name="Schedule"
-		xml:space="preserve">
+	<data name="Schedule" xml:space="preserve">
     <value>Stundenplan</value>
   </data>
-	<data name="Courses"
-		xml:space="preserve">
+	<data name="Courses" xml:space="preserve">
     <value>Kurse</value>
   </data>
-	<data name="Specialization"
-		xml:space="preserve">
+	<data name="Specialization" xml:space="preserve">
     <value>Vertiefung</value>
   </data>
-	<data name="PricesLabel"
-		xml:space="preserve">
+	<data name="PricesLabel" xml:space="preserve">
     <value>Studierende / Bedienstete / Gäste</value>
   </data>
-	<data name="Allergens"
-		xml:space="preserve">
+	<data name="Allergens" xml:space="preserve">
     <value>Allergene</value>
   </data>
-	<data name="A1"
-		xml:space="preserve">
+	<data name="A1" xml:space="preserve">
     <value>glutenhaltig</value>
   </data>
-	<data name="A2"
-		xml:space="preserve">
+	<data name="A2" xml:space="preserve">
     <value>Krebstiere und Krebstiererzeugnisse</value>
   </data>
-	<data name="A3"
-		xml:space="preserve">
+	<data name="A3" xml:space="preserve">
     <value>Eier und Eiererzeugnisse</value>
   </data>
-	<data name="A4"
-		xml:space="preserve">
+	<data name="A4" xml:space="preserve">
     <value>Fisch</value>
   </data>
-	<data name="A5"
-		xml:space="preserve">
+	<data name="A5" xml:space="preserve">
     <value>Erdnüsse und Erdnusserzeugnisse</value>
   </data>
-	<data name="A6"
-		xml:space="preserve">
+	<data name="A6" xml:space="preserve">
     <value>Soja und Sojaerzeugnisse</value>
   </data>
-	<data name="A7"
-		xml:space="preserve">
+	<data name="A7" xml:space="preserve">
     <value>Milch und Milcherzeugnisse(einschließlich Lactose)</value>
   </data>
-	<data name="A8"
-		xml:space="preserve">
+	<data name="A8" xml:space="preserve">
     <value>Schalenfrüchte sowie daraus hergest. Erzeugnisse</value>
   </data>
-	<data name="A9"
-		xml:space="preserve">
+	<data name="A9" xml:space="preserve">
     <value>Sellerie und Sellerieerzeugnisse</value>
   </data>
-	<data name="A10"
-		xml:space="preserve">
+	<data name="A10" xml:space="preserve">
     <value>Senf und Senferzeugnisse</value>
   </data>
-	<data name="A11"
-		xml:space="preserve">
+	<data name="A11" xml:space="preserve">
     <value>Sesamsamen und Sesamsamenerzeugnisse</value>
   </data>
-	<data name="A12"
-		xml:space="preserve">
+	<data name="A12" xml:space="preserve">
     <value>Schwefeldioxid und Sulfite</value>
   </data>
-	<data name="A13"
-		xml:space="preserve">
+	<data name="A13" xml:space="preserve">
     <value>Lupinen und Lupinenerzeugnisse</value>
   </data>
-	<data name="A14"
-		xml:space="preserve">
+	<data name="A14" xml:space="preserve">
     <value>Weichtiere und Weichtiererzeugnisse</value>
   </data>
-	<data name="Additives"
-		xml:space="preserve">
+	<data name="Additives" xml:space="preserve">
     <value>Zusatzstoffe</value>
   </data>
-	<data name="Z1"
-		xml:space="preserve">
+	<data name="Z1" xml:space="preserve">
     <value>mit Farbstoff(en)</value>
   </data>
-	<data name="Z2"
-		xml:space="preserve">
+	<data name="Z2" xml:space="preserve">
     <value>mit Konservierungsstoff(en)</value>
   </data>
-	<data name="Z3"
-		xml:space="preserve">
+	<data name="Z3" xml:space="preserve">
     <value>mit Antioxidationsmittel</value>
   </data>
-	<data name="Z4"
-		xml:space="preserve">
+	<data name="Z4" xml:space="preserve">
     <value>mit Geschmacksverstärker(n)</value>
   </data>
-	<data name="Z5"
-		xml:space="preserve">
+	<data name="Z5" xml:space="preserve">
     <value>mit Phosphat</value>
   </data>
-	<data name="Z6"
-		xml:space="preserve">
+	<data name="Z6" xml:space="preserve">
     <value>geschwefelt</value>
   </data>
-	<data name="Z7"
-		xml:space="preserve">
+	<data name="Z7" xml:space="preserve">
     <value>gewachst</value>
   </data>
-	<data name="Z8"
-		xml:space="preserve">
+	<data name="Z8" xml:space="preserve">
     <value>geschwärzt</value>
   </data>
-	<data name="Z9"
-		xml:space="preserve">
+	<data name="Z9" xml:space="preserve">
     <value>mit Süßungsmittel(n)</value>
   </data>
-	<data name="Z10"
-		xml:space="preserve">
+	<data name="Z10" xml:space="preserve">
     <value>enthält eine Phenylalaninquelle</value>
   </data>
-	<data name="Z11"
-		xml:space="preserve">
+	<data name="Z11" xml:space="preserve">
     <value>mit Taurin</value>
   </data>
-	<data name="Z12"
-		xml:space="preserve">
+	<data name="Z12" xml:space="preserve">
     <value>mit Nitratpökelsalz</value>
   </data>
-	<data name="Z13"
-		xml:space="preserve">
+	<data name="Z13" xml:space="preserve">
     <value>koffeinhaltig</value>
   </data>
-	<data name="Z14"
-		xml:space="preserve">
+	<data name="Z14" xml:space="preserve">
     <value>chininhaltig</value>
   </data>
-	<data name="Z15"
-		xml:space="preserve">
+	<data name="Z15" xml:space="preserve">
     <value>Milcheiweiß</value>
   </data>
-	<data name="Error"
-		xml:space="preserve">
+	<data name="Error" xml:space="preserve">
     <value>Fehler</value>
   </data>
-	<data name="Info"
-		xml:space="preserve">
+	<data name="Info" xml:space="preserve">
     <value>Info</value>
   </data>
-	<data name="OK"
-		xml:space="preserve">
+	<data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
-	<data name="Cancel"
-		xml:space="preserve">
+	<data name="Cancel" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
-	<data name="SearchTerm"
-		xml:space="preserve">
+	<data name="SearchTerm" xml:space="preserve">
     <value>Suchbegriff</value>
   </data>
-	<data name="MensaInfo"
-		xml:space="preserve">
+	<data name="MensaInfo" xml:space="preserve">
     <value>Weitere Informationen zu Inhaltsstoffen und Nährwerten gibt es auf der Webseite des Studierendenwerks Paderborn.</value>
   </data>
-	<data name="IOSPermissions"
-		xml:space="preserve">
+	<data name="IOSPermissions" xml:space="preserve">
     <value>Bitte erlaube Kalenderzugriff in der Einstellungsapp.</value>
   </data>
-	<data name="PermissionRationale"
-		xml:space="preserve">
+	<data name="PermissionRationale" xml:space="preserve">
     <value>Kalenderzugriff wird für den Export benötigt.</value>
   </data>
-	<data name="Show"
-		xml:space="preserve">
+	<data name="Show" xml:space="preserve">
     <value>Anzeigen</value>
   </data>
-	<data name="Maindishes"
-		xml:space="preserve">
+	<data name="Maindishes" xml:space="preserve">
     <value>Essen</value>
   </data>
-	<data name="Soups"
-		xml:space="preserve">
+	<data name="Soups" xml:space="preserve">
     <value>Suppen</value>
   </data>
-	<data name="Sidedishes"
-		xml:space="preserve">
+	<data name="Sidedishes" xml:space="preserve">
     <value>Beilagen</value>
   </data>
-	<data name="Desserts"
-		xml:space="preserve">
+	<data name="Desserts" xml:space="preserve">
     <value>Desserts</value>
   </data>
-	<data name="NoMeals"
-		xml:space="preserve">
+	<data name="NoMeals" xml:space="preserve">
     <value>Keine Essen zur Anzeige. Mensa geschlossen?</value>
   </data>
-	<data name="NoCalendars"
-		xml:space="preserve">
+	<data name="NoCalendars" xml:space="preserve">
     <value>Keine editierbaren Kalender.</value>
   </data>
-	<data name="ErrorMessage"
-		xml:space="preserve">
+	<data name="ErrorMessage" xml:space="preserve">
     <value>Fehler beim Abrufen der Daten. Bitte später erneut probieren.</value>
   </data>
-	<data name="Quiz"
-		xml:space="preserve">
+	<data name="Quiz" xml:space="preserve">
     <value>Quiz</value>
   </data>
-	<data name="Buddy"
-		xml:space="preserve">
+	<data name="Buddy" xml:space="preserve">
     <value>Buddy</value>
   </data>
-	<data name="Right"
-		xml:space="preserve">
+	<data name="Right" xml:space="preserve">
     <value>Richtig</value>
   </data>
-	<data name="Wrong"
-		xml:space="preserve">
+	<data name="Wrong" xml:space="preserve">
     <value>Falsch</value>
   </data>
-	<data name="Skip"
-		xml:space="preserve">
+	<data name="Skip" xml:space="preserve">
     <value>Überspringen</value>
   </data>
-	<data name="CRC"
-		xml:space="preserve">
+	<data name="CRC" xml:space="preserve">
     <value>CRC</value>
   </data>
-	<data name="MST"
-		xml:space="preserve">
+	<data name="MST" xml:space="preserve">
     <value>Minimaler Spannbaum</value>
   </data>
-	<data name="ShortestPaths"
-		xml:space="preserve">
+	<data name="ShortestPaths" xml:space="preserve">
     <value>Kürzeste Wege</value>
   </data>
-	<data name="Netmasks"
-		xml:space="preserve">
+	<data name="Netmasks" xml:space="preserve">
     <value>Netzmasken</value>
   </data>
-	<data name="Address"
-		xml:space="preserve">
+	<data name="Address" xml:space="preserve">
     <value>Adresse</value>
   </data>
-	<data name="Scheduling"
-		xml:space="preserve">
+	<data name="Scheduling" xml:space="preserve">
     <value>Scheduling</value>
   </data>
-	<data name="RealtimeScheduling"
-		xml:space="preserve">
+	<data name="RealtimeScheduling" xml:space="preserve">
     <value>Echtzeitscheduling</value>
   </data>
-	<data name="Processes"
-		xml:space="preserve">
+	<data name="Processes" xml:space="preserve">
     <value>Prozesse</value>
   </data>
-	<data name="Status"
-		xml:space="preserve">
+	<data name="Status" xml:space="preserve">
     <value>Status</value>
   </data>
-	<data name="Student"
-		xml:space="preserve">
+	<data name="Student" xml:space="preserve">
     <value>Studierende</value>
   </data>
-	<data name="Staff"
-		xml:space="preserve">
+	<data name="Staff" xml:space="preserve">
     <value>Bedienstete</value>
   </data>
-	<data name="Guest"
-		xml:space="preserve">
+	<data name="Guest" xml:space="preserve">
     <value>Gäste</value>
   </data>
-	<data name="CalendarExportQuery"
-		xml:space="preserve">
+	<data name="CalendarExportQuery" xml:space="preserve">
     <value>Veranstaltung in Kalender exportieren?</value>
   </data>
-	<data name="StatusQuery"
-		xml:space="preserve">
+	<data name="StatusQuery" xml:space="preserve">
     <value>Was ist Dein aktueller Status an der HSHL?</value>
   </data>
-	<data name="QueryInfo"
-		xml:space="preserve">
+	<data name="QueryInfo" xml:space="preserve">
     <value>Du kannst die Einstellung auch nachher ändern!</value>
   </data>
-	<data name="ExerciseBasicLayout"
-		xml:space="preserve">
+	<data name="ExerciseBasicLayout" xml:space="preserve">
     <value>Exercise Basic Layout</value>
   </data>
-	<data name="InfoText_Buddy_Request"
-		xml:space="preserve">
+	<data name="InfoText_Buddy_Request" xml:space="preserve">
     <value>Der Prozess {0} fordert {1} KB an Speicher an. Dem Prozess werden {2} KB zugewiesen.</value>
   </data>
-	<data name="InfoText_Buddy_Final"
-		xml:space="preserve">
+	<data name="InfoText_Buddy_Final" xml:space="preserve">
     <value>Der Prozess {0} wird wieder freigegeben.</value>
   </data>
-	<data name="InfoText_PageReplacement_Element_Added"
-		xml:space="preserve">
+	<data name="InfoText_PageReplacement_Element_Added" xml:space="preserve">
     <value>Das Element {0} wurde in Kachel {1} eingefügt,</value>
   </data>
-	<data name="InfoText_PageReplacement_Element_Added_Empty"
-		xml:space="preserve">
+	<data name="InfoText_PageReplacement_Element_Added_Empty" xml:space="preserve">
     <value>da die Kachel leer stand.</value>
   </data>
-	<data name="InfoText_PageReplacement_Element_Added_NotInUse"
-		xml:space="preserve">
+	<data name="InfoText_PageReplacement_Element_Added_NotInUse" xml:space="preserve">
     <value>da das Element dieser Kachel nicht mehr genutzt wird.</value>
   </data>
-	<data name="InfoText_PageReplacement_Element_Exists"
-		xml:space="preserve">
+	<data name="InfoText_PageReplacement_Element_Exists" xml:space="preserve">
     <value>Das Element ist bereits in Kachel {0} vorhanden.</value>
   </data>
-	<data name="InfoText_PageReplacement_Fifo_Element_Added_Distance"
-		xml:space="preserve">
+	<data name="InfoText_PageReplacement_Fifo_Element_Added_Distance" xml:space="preserve">
     <value>da die letzte Nutzung des Elementes dieser Kachel am weitesten ({0}) in der Vergangenheit lag.</value>
   </data>
-	<data name="InfoText_PageReplacement_LRU_Element_Added_Distance"
-		xml:space="preserve">
+	<data name="InfoText_PageReplacement_LRU_Element_Added_Distance" xml:space="preserve">
     <value>da die letzte Nutzung des Elementes dieser Kachel am weitesten {0} in der Vergangenheit lag.</value>
   </data>
-	<data name="InfoText_PageReplacement_Optimal_Element_Added_NotInUse"
-		xml:space="preserve">
+	<data name="InfoText_PageReplacement_Optimal_Element_Added_NotInUse" xml:space="preserve">
     <value>da die nächste Nutzung des Elementes dieser Kachel am weitesten ({0}) in der Zukunft lag.</value>
   </data>
-	<data name="InfoText_PageReplacement_SecondChanceClock_Element_Added_NotPointer"
-		xml:space="preserve">
+	<data name="InfoText_PageReplacement_SecondChanceClock_Element_Added_NotPointer" xml:space="preserve">
     <value>Der Zeiger bestimmt, welche Kachel zu erst betrachtet wird: Kachel {0}. 
 
 Da das Referenzbit dieser Kachel = 1 war, wird dieses zunächst auf 0 gesetzt und anschließend die nächste Kachel betrachtet. 
@@ -390,22 +297,19 @@ Kachel {1} war die erste Kachel mit Referenzbit = 0, in welches das Element eing
 
 Nun zeigt der Zeiger auf: Kachel {1}</value>
   </data>
-	<data name="InfoText_PageReplacement_SecondChanceClock_Element_Added_Pointer"
-		xml:space="preserve">
+	<data name="InfoText_PageReplacement_SecondChanceClock_Element_Added_Pointer" xml:space="preserve">
     <value>Der Zeiger bestimmt, welche Kachel zu erst betrachtet wird: Kachel {0}. 
 
 Da das Referenzbit dieser Kachel = 0 war, konnte das Element eingesetzt werden. 
 
 Nun zeigt der Zeiger auf Kachel {1}.</value>
   </data>
-	<data name="InfoText_RealTimeScheduling_EDF"
-		xml:space="preserve">
+	<data name="InfoText_RealTimeScheduling_EDF" xml:space="preserve">
     <value>Der Prozess {0} hat gemäß EDF aktuell Priorität, da er die früheste Deadline hat. 
 
 Er wird gestartet, da kein anderer Prozess mit früherer Deadline rechenbereit ist.</value>
   </data>
-	<data name="InfoText_RealTimeScheduling_EDF_Info"
-		xml:space="preserve">
+	<data name="InfoText_RealTimeScheduling_EDF_Info" xml:space="preserve">
     <value>
 
 
@@ -414,14 +318,12 @@ EDF = Earliest Deadline First
 
 Die Priorität wird von der Deadline des Prozesses abgeleitet. Je früher die Deadline, desto höher die Priorität.</value>
   </data>
-	<data name="InfoText_RealTimeScheduling_RMS_High"
-		xml:space="preserve">
+	<data name="InfoText_RealTimeScheduling_RMS_High" xml:space="preserve">
     <value>Da der Prozess {0} gemäß RMS die höchste Priorität hat, wird er sofort ausgeführt. 
 
 Der Prozess kann Prozesse mit niedriger und mittlerer Priorität unterbrechen.</value>
   </data>
-	<data name="InfoText_RealTimeScheduling_RMS_Info"
-		xml:space="preserve">
+	<data name="InfoText_RealTimeScheduling_RMS_Info" xml:space="preserve">
     <value>
 
 
@@ -430,156 +332,122 @@ RMS = Raten Monotones Scheduling
 
 Die Priorität wird von der Häufigkeit des Prozesses abgeleitet. Je häufiger ein Prozess vorkommt, desto höher wird er priorisiert.</value>
   </data>
-	<data name="InfoText_RealTimeScheduling_RMS_Low"
-		xml:space="preserve">
+	<data name="InfoText_RealTimeScheduling_RMS_Low" xml:space="preserve">
     <value>Der Prozess {0} hat gemäß RMS die niedrigste Priorität. 
 
 Er wird gestartet, da kein Prozess mit höherer Priorität ansteht. 
 
 Der Prozess kann von einem Prozess mit mittlerer oder hoher Priorität unterbrochen werden.</value>
   </data>
-	<data name="InfoText_RealTimeScheduling_RMS_Medium"
-		xml:space="preserve">
+	<data name="InfoText_RealTimeScheduling_RMS_Medium" xml:space="preserve">
     <value>Der Prozess {0} hat gemäß RMS mittlere Priorität. 
 
 Er wird gestartet, da kein Prozess mit höherer Priorität ansteht. \n\nDer Prozess kann einen Prozess mit niedriger Priorität unterbrechen und von einem Prozess mit hoher Priorität unterbrochen werden.</value>
   </data>
-	<data name="TableLabel_CRC_Calculation"
-		xml:space="preserve">
+	<data name="TableLabel_CRC_Calculation" xml:space="preserve">
     <value>Berechnung</value>
   </data>
-	<data name="TableLabel_CRC_Check"
-		xml:space="preserve">
+	<data name="TableLabel_CRC_Check" xml:space="preserve">
     <value>Prüfung</value>
   </data>
-	<data name="TableLabel_PageReplacement_Distance"
-		xml:space="preserve">
+	<data name="TableLabel_PageReplacement_Distance" xml:space="preserve">
     <value>Abstand</value>
   </data>
-	<data name="TableLabel_PageReplacement_Pointer"
-		xml:space="preserve">
+	<data name="TableLabel_PageReplacement_Pointer" xml:space="preserve">
     <value>Zeiger</value>
   </data>
-	<data name="TableLabel_PageReplacement_Reference"
-		xml:space="preserve">
+	<data name="TableLabel_PageReplacement_Reference" xml:space="preserve">
     <value>Referenz</value>
   </data>
-	<data name="TableLabel_PageReplacement_Slot"
-		xml:space="preserve">
+	<data name="TableLabel_PageReplacement_Slot" xml:space="preserve">
     <value>Kachel</value>
   </data>
-	<data name="MSTV_Info_1"
-		xml:space="preserve">
+	<data name="MSTV_Info_1" xml:space="preserve">
     <value>Der kürzeste Weg um </value>
   </data>
-	<data name="MSTV_Info_2"
-		xml:space="preserve">
+	<data name="MSTV_Info_2" xml:space="preserve">
     <value>mit </value>
   </data>
-	<data name="MSTV_Info_3"
-		xml:space="preserve">
+	<data name="MSTV_Info_3" xml:space="preserve">
     <value> zu Verbinden ist über die </value>
   </data>
-	<data name="MSTV_Info_4"
-		xml:space="preserve">
+	<data name="MSTV_Info_4" xml:space="preserve">
     <value>Kante mit der Gewichtung </value>
   </data>
-	<data name="ShortestPath_Info_1"
-		xml:space="preserve">
+	<data name="ShortestPath_Info_1" xml:space="preserve">
     <value>Der kürzeste Weg zu </value>
   </data>
-	<data name="ShortestPath_Info_2"
-		xml:space="preserve">
+	<data name="ShortestPath_Info_2" xml:space="preserve">
     <value> ausgehend von </value>
   </data>
-	<data name="ShortestPath_Info_3"
-		xml:space="preserve">
+	<data name="ShortestPath_Info_3" xml:space="preserve">
     <value> ist zu erreichen über: </value>
   </data>
-	<data name="InfoText_BitEncoding"
-		xml:space="preserve">
+	<data name="InfoText_BitEncoding" xml:space="preserve">
     <value>NRZ: 0 = -  |  1 = +
 NRZI: 1 = Spannungsveränderung (+/-) 
 MLT-3: 1 = abwechselnd +, 0 und -</value>
   </data>
-	<data name="InfoText_Scheduling_FirstComeFirstServed_Info"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_FirstComeFirstServed_Info" xml:space="preserve">
     <value>Die Prozesse werden der Reihenfolge nach abgearbeitet. 
             
 Für die Gesamtwartezeit wird die Laufzeit eines jeden Prozesses mit der Anzahl an bereiten Prozessen multipliziert, das Ergebnis wird summiert und durch die Anzahl der Prozesse dividiert.</value>
   </data>
-	<data name="InfoText_Scheduling_Priority_Info"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_Priority_Info" xml:space="preserve">
     <value>Die Prozesse werden der Reihenfolge nach entsprechend ihrer Priorität abgearbeitet. 
 
 Für die Gesamtwartezeit wird die Laufzeit eines jeden Prozesses mit der jeweiligen Priorität multipliziert, das Ergebnis wird summiert und durch die Anzahl der Prozesse dividiert.</value>
   </data>
-	<data name="InfoText_Scheduling_ShortestJobFirst_Info"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_ShortestJobFirst_Info" xml:space="preserve">
     <value>Die Prozesse werden der Reihenfolge nach abgearbeitet, wobei Prozesse mit geringer Laufzeit priorisiert werden.
 
 Für die Gesamtwartezeit wird die Laufzeit eines jeden Prozesses mit der Anzahl an bereiten Prozessen multipliziert, das Ergebnis wird summiert und durch die Anzahl der Prozesse dividiert.</value>
   </data>
-	<data name="InfoText_Scheduling_Calculation"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_Calculation" xml:space="preserve">
     <value>Berechnung</value>
   </data>
-	<data name="InfoText_Scheduling_Duration"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_Duration" xml:space="preserve">
     <value>Dauer</value>
   </data>
-	<data name="InfoText_Scheduling_Priority"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_Priority" xml:space="preserve">
     <value>Priorität</value>
   </data>
-	<data name="InfoText_Scheduling_Result"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_Result" xml:space="preserve">
     <value>Ergebnis</value>
   </data>
-	<data name="InfoText_Scheduling_RoundRobin_AfterTimeUnit"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_RoundRobin_AfterTimeUnit" xml:space="preserve">
     <value>Nach {0} Zeiteinheit:</value>
   </data>
-	<data name="InfoText_Scheduling_RoundRobin_AfterTimeUnits"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_RoundRobin_AfterTimeUnits" xml:space="preserve">
     <value>Nach {0} Zeiteinheiten:</value>
   </data>
-	<data name="InfoText_Scheduling_RoundRobin_Begin"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_RoundRobin_Begin" xml:space="preserve">
     <value>Beginn:</value>
   </data>
-	<data name="InfoText_Scheduling_RoundRobin_Info"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_RoundRobin_Info" xml:space="preserve">
     <value>Nach dem Round Robin Verfahren wird jedem bereiten Prozess die selbe Rechenzeit gewährt. Wird ein Prozess vollendet, so wird die Rechenzeit erneut aufgeteilt. 
 
 Die Gesamtwartezeit ergibt sich aus den Zeiteinheiten, welche es braucht, bis ein jeder Prozess vollendet ist, multipliziert mit der jeweiligen Anzahl an bereiten Prozessen, dividiert durch die Gesamtanzahl der Prozesse.</value>
   </data>
-	<data name="InfoText_Scheduling_RoundRobin_WaitingTime"
-		xml:space="preserve">
+	<data name="InfoText_Scheduling_RoundRobin_WaitingTime" xml:space="preserve">
     <value>Wartezeit:</value>
   </data>
-	<data name="InfoText_CRC_check"
-		xml:space="preserve">
+	<data name="InfoText_CRC_check" xml:space="preserve">
     <value>Die übrig gebliebene Bitfolge wird als Prüfbit bezeichnet und kann im Folgenden für die Prüfung verwendet werden.</value>
   </data>
-	<data name="InfoText_CRC_check_Finish"
-		xml:space="preserve">
+	<data name="InfoText_CRC_check_Finish" xml:space="preserve">
     <value>Ergibt die zum Schluss übrig gebliebene Bitfolge 0, so war die Übertragung erfolgreich.</value>
   </data>
-	<data name="InfoText_CRC_check_Start"
-		xml:space="preserve">
+	<data name="InfoText_CRC_check_Start" xml:space="preserve">
     <value>Die ursprüngliche Bitfolge {0} wird um das Prüfbit {1} erweitert. Anschließend wird eine XOR Division mit dem festen Generatorpolynom 100101 durchgeführt.</value>
   </data>
-	<data name="InfoText_CRC_evenStep"
-		xml:space="preserve">
+	<data name="InfoText_CRC_evenStep" xml:space="preserve">
     <value>Auf der resultierenden Bitfolge wird wieder eine XOR Division mit dem Generatorpolynom 100101 durchgeführt.</value>
   </data>
-	<data name="InfoText_CRC_Start"
-		xml:space="preserve">
+	<data name="InfoText_CRC_Start" xml:space="preserve">
     <value>Die Bitfolge {0} wird um 5 Nullen erweitert. Anschließend wird eine XOR Division mit dem Generatorpolynom 100101 (CRC5) durchgeführt.</value>
   </data>
-	<data name="InfoText_CRC_unevenStep"
-		xml:space="preserve">
+	<data name="InfoText_CRC_unevenStep" xml:space="preserve">
     <value>XOR Division wird durchgeführt: 
 
 1 über 1 ergibt 0 
@@ -589,4 +457,34 @@ Die Gesamtwartezeit ergibt sich aus den Zeiteinheiten, welche es braucht, bis ei
                     
 Voranstehende Nullen können weg gelassen werden. Die resultierende Bitfolge wird wieder auf 6 Zeichen erweitert, indem die vorhandenen Bits (Nullen) der Bitfolge heruntergezogen werden.</value>
   </data>
+	<data name="title.statistics" xml:space="preserve">
+    <value>Statistiken</value>
+	</data>
+	<data name="label.sum" xml:space="preserve">
+    <value>Bearbeitete Fragen</value>
+	</data>
+	<data name="label.correct" xml:space="preserve">
+    <value>Richtig beantwortet</value>
+	</data>
+	<data name="label.wrong" xml:space="preserve">
+    <value>Falsch beantwortet</value>
+	</data>
+	<data name="label.skipped" xml:space="preserve">
+    <value>Übersprungen</value>
+	</data>
+	<data name="question_1" xml:space="preserve">
+    <value>Das Videospiel Donkey Kong sollte ursprünglich Popeye als Hauptfigur haben.</value>
+	</data>
+	<data name="question_2" xml:space="preserve">
+    <value>Die Farbe Orange wurde nach der Frucht benannt.</value>
+	</data>
+	<data name="question_3" xml:space="preserve">
+    <value>In der griechischen Mythologie ist Hera die Göttin der Ernte.</value>
+	</data>
+	<data name="question_4" xml:space="preserve">
+    <value>Liechtenstein hat keinen eigenen Flughafen.</value>
+	</data>
+	<data name="question_5" xml:space="preserve">
+    <value>Die meisten Subarus werden in China hergestellt.</value>
+	</data>
 </root>

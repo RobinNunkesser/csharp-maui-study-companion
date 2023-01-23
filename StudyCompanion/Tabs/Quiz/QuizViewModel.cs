@@ -10,23 +10,23 @@ namespace StudyCompanion
         private readonly List<YesNoQuestion> questions = new List<YesNoQuestion>
         {
             new YesNoQuestion() {
-                Text = "Das Videospiel Donkey Kong sollte ursprünglich Popeye als Hauptfigur haben.",
+                Text = Resources.Strings.AppResources.question_1,
                 Answer = true
             },
             new YesNoQuestion() {
-                Text = "Die Farbe Orange wurde nach der Frucht benannt.",
+                Text = Resources.Strings.AppResources.question_2,
                 Answer = true
             },
             new YesNoQuestion() {
-                Text = "In der griechischen Mythologie ist Hera die Göttin der Ernte.",
+                Text = Resources.Strings.AppResources.question_3,
                 Answer = false
             },
             new YesNoQuestion() {
-                Text = "Liechtenstein hat keinen eigenen Flughafen.",
+                Text = Resources.Strings.AppResources.question_4,
                 Answer = true
             },
             new YesNoQuestion() {
-                Text = "Die meisten Subarus werden in China hergestellt.",
+                Text = Resources.Strings.AppResources.question_5,
                 Answer = false
             },
         };
@@ -82,12 +82,12 @@ namespace StudyCompanion
             if (questions[index].Answer == value)
             {
                 CorrectAnswers++;
-                Answer = "Richtig!";
+                Answer = Resources.Strings.AppResources.Right;
             }
             else
             {
                 WrongAnswers++;
-                Answer = "Falsch!";
+                Answer = Resources.Strings.AppResources.Wrong;
             }
             IncreaseIndex();
         }

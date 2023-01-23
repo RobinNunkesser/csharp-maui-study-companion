@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StudyCompanion"
              x:Class="StudyCompanion.QuizStatisticsPage"
-             Title="QuizStatisticsPage">
+             x:DataType="local:QuizViewModel"
+             Title="{local:Localize Statistics}">
     <ContentPage.Content>
         <Grid RowSpacing="8">
             <Grid.RowDefinitions>
@@ -18,19 +20,19 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label Grid.Row="1" Grid.Column="0" 
-                   Text="Bearbeitete Fragen" HorizontalOptions="StartAndExpand"/>
+                   Text="{local:Localize label.sum}" HorizontalOptions="StartAndExpand"/>
             <Label Grid.Row="1" Grid.Column="1" 
                    Text="{Binding AnsweredQuestions}" HorizontalOptions="End"/>
             <Label Grid.Row="2" Grid.Column="0"
-                   Text="Richtig beantwortet" HorizontalOptions="StartAndExpand"/>
+                   Text="{local:Localize label.correct}" HorizontalOptions="StartAndExpand"/>
             <Label Grid.Row="2" Grid.Column="1"
                    Text="{Binding CorrectAnswers}" HorizontalOptions="End"/>
             <Label Grid.Row="3" Grid.Column="0" 
-                   Text="Falsch beantwortet" HorizontalOptions="StartAndExpand"/>
+                   Text="{local:Localize label.wrong}" HorizontalOptions="StartAndExpand"/>
             <Label Grid.Row="3" Grid.Column="1" 
                    Text="{Binding WrongAnswers}" HorizontalOptions="End"/>
             <Label Grid.Row="4" Grid.Column="0"
-                   Text="Übersprungen" HorizontalOptions="StartAndExpand"/>
+                   Text="{local:Localize label.skipped}" HorizontalOptions="StartAndExpand"/>
             <Label Grid.Row="4" Grid.Column="1"
                    Text="{Binding SkippedQuestions}" HorizontalOptions="End"/>
         </Grid>

@@ -708,6 +708,42 @@ namespace StudyCompanion.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Answered correctly.
+        /// </summary>
+        internal static string label_correct {
+            get {
+                return ResourceManager.GetString("label.correct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skipped.
+        /// </summary>
+        internal static string label_skipped {
+            get {
+                return ResourceManager.GetString("label.skipped", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Questions.
+        /// </summary>
+        internal static string label_sum {
+            get {
+                return ResourceManager.GetString("label.sum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Answered wrong.
+        /// </summary>
+        internal static string label_wrong {
+            get {
+                return ResourceManager.GetString("label.wrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dishes.
         /// </summary>
         internal static string Maindishes {
@@ -893,6 +929,51 @@ namespace StudyCompanion.Resources.Strings {
         internal static string QueryInfo {
             get {
                 return ResourceManager.GetString("QueryInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The video game Donkey Kong was originally going to have Popeye as the main character..
+        /// </summary>
+        internal static string question_1 {
+            get {
+                return ResourceManager.GetString("question_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The color orange was named after the fruit..
+        /// </summary>
+        internal static string question_2 {
+            get {
+                return ResourceManager.GetString("question_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In Greek mythology, Hera is the goddess of the harvest..
+        /// </summary>
+        internal static string question_3 {
+            get {
+                return ResourceManager.GetString("question_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Liechtenstein does not have its own airport..
+        /// </summary>
+        internal static string question_4 {
+            get {
+                return ResourceManager.GetString("question_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Most Subarus are made in China..
+        /// </summary>
+        internal static string question_5 {
+            get {
+                return ResourceManager.GetString("question_5", resourceCulture);
             }
         }
         
@@ -1145,6 +1226,15 @@ namespace StudyCompanion.Resources.Strings {
         internal static string TableLabel_PageReplacement_Slot {
             get {
                 return ResourceManager.GetString("TableLabel_PageReplacement_Slot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Statistics.
+        /// </summary>
+        internal static string title_statistics {
+            get {
+                return ResourceManager.GetString("title.statistics", resourceCulture);
             }
         }
         
