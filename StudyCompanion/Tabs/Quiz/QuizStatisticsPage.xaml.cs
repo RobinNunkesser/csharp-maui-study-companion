@@ -2,9 +2,11 @@
 
 public partial class QuizStatisticsPage : ContentPage
 {
-    public QuizStatisticsPage(object bindingContext)
+    readonly QuizViewModel _viewModel;
+
+    public QuizStatisticsPage(QuizViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = bindingContext;
+        BindingContext = _viewModel = viewModel;
     }
 }

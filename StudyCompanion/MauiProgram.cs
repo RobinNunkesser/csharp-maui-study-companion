@@ -42,6 +42,9 @@ public static class MauiProgram
     )
     {
         mauiAppBuilder.Services.AddLocalization();
+        mauiAppBuilder.Services.AddSingleton<QuizPage>();
+        mauiAppBuilder.Services.AddSingleton<QuizViewModel>();
+        mauiAppBuilder.Services.AddSingleton<QuizStatisticsPage>();
         mauiAppBuilder.Services.AddSingleton<MensaPage>();
         mauiAppBuilder.Services.AddSingleton<MensaViewModel>();
         return mauiAppBuilder;

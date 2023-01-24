@@ -1,13 +1,15 @@
-﻿namespace StudyCompanion;
+﻿using Italbytz.Ports.Meal;
+
+namespace StudyCompanion;
 
 public partial class QuizPage : ContentPage
 {
-    private QuizViewModel viewModel = new QuizViewModel();
+    readonly QuizViewModel _viewModel;
 
-    public QuizPage()
+    public QuizPage(QuizViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel;
+        BindingContext = _viewModel = viewModel;
     }
 
     async void Answer_Clicked(object sender, System.EventArgs e)
@@ -24,6 +26,6 @@ public partial class QuizPage : ContentPage
 
     async void Statistics_Clicked(object sender, System.EventArgs e)
     {
-        await Navigation.PushAsync(new QuizStatisticsPage(viewModel));
+        await Navigation.PushAsync(new QuizStatisticsPage(_viewModel));
     }
 }
