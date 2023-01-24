@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Italbytz.Adapters.Meal.Mock;
+using Italbytz.Ports.Meal;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace StudyCompanion;
 
@@ -24,6 +27,7 @@ public static class MauiProgram
         {
             case Environment.Development:
                 builder.Logging.AddDebug();
+                builder.Services.AddSingleton<IGetMealsService, MockGetMealsService>();
                 break;
             case Environment.Staging:
             case Environment.Production:
@@ -38,6 +42,8 @@ public static class MauiProgram
     )
     {
         mauiAppBuilder.Services.AddLocalization();
+        mauiAppBuilder.Services.AddSingleton<MensaPage>();
+        mauiAppBuilder.Services.AddSingleton<MensaViewModel>();
         return mauiAppBuilder;
     }
 }

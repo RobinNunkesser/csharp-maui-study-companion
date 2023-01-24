@@ -10,4 +10,7 @@
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
 	  <LangVersion>9.0</LangVersion>
 	</PropertyGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\StudyCompanion.Ports\StudyCompanion.Ports.csproj" />
+	</ItemGroup>
 </Project>

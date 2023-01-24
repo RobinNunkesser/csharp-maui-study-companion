@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCompanion.Infra.Mock",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCompanion.Ports", "StudyCompanion.Ports\StudyCompanion.Ports.csproj", "{A518CD11-CBF9-4228-B628-13397DC29338}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCompanion.Core.Mock", "StudyCompanion.Core.Mock\StudyCompanion.Core.Mock.csproj", "{0E737670-7EDA-4A6E-BA58-53525A40F200}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{A518CD11-CBF9-4228-B628-13397DC29338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A518CD11-CBF9-4228-B628-13397DC29338}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A518CD11-CBF9-4228-B628-13397DC29338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E737670-7EDA-4A6E-BA58-53525A40F200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E737670-7EDA-4A6E-BA58-53525A40F200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E737670-7EDA-4A6E-BA58-53525A40F200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E737670-7EDA-4A6E-BA58-53525A40F200}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
