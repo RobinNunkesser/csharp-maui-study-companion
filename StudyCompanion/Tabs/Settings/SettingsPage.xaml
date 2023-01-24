@@ -1,22 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StudyCompanion"
              x:Class="StudyCompanion.SettingsPage"
-             Title="SettingsPage">
-    <VerticalStackLayout>
-        <Button
-            Text="Acknowledgments"
-            Clicked="Acknowledgments_Clicked"
-             />
-                <Button
-            Text="Additives"
-            Clicked="Additives_Clicked"
-             />
-
-                <Button
-            Text="Allergens"
-            Clicked="Allergens_Clicked"
-             />
-
-    </VerticalStackLayout>
+             Title="{local:Localize Settings}">
+    <ContentPage.Content>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="{local:Localize Settings}">
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
+                                <Label Text="{local:Localize Status}"
+                                       HorizontalOptions="StartAndExpand"
+                                       VerticalOptions="Center"
+                                       TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}"/>
+                                <Picker
+                                    x:Name="StatusPicker"
+                                    Title="{local:Localize Status}"
+                                    HorizontalOptions="EndAndExpand"
+                                    SelectedIndex="{Binding Status}"
+                                    >
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>Studierende</x:String>
+                                            <x:String>Bedienstete</x:String>
+                                            <x:String>Gäste</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                    <TextCell Text="{local:Localize Allergens}"
+                               Command="{Binding NavigateCommand}"
+                               CommandParameter="{x:Type local:AllergensPage}"
+                               />                
+                     <TextCell Text="{local:Localize Additives}"
+                               Command="{Binding NavigateCommand}"
+                               CommandParameter="{x:Type local:AdditivesPage}"
+                               />                
+                </TableSection>
+                <TableSection Title="Acknowledgements / Licenses">
+                    <TextCell Text="Acknowledgements"
+                              Command="{Binding NavigateCommand}"
+                               CommandParameter="{x:Type local:AcknowledgementsPage}"
+                               />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
 </ContentPage>

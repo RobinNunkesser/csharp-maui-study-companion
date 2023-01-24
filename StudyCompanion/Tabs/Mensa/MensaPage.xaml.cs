@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Italbytz.Ports.Meal;
+using StudyCompanion.Resources.Strings;
 
 namespace StudyCompanion;
 
@@ -30,7 +31,24 @@ public partial class MensaPage : ContentPage
 
     private async void Success(List<IMealCollection> meals)
     {
-        Debug.WriteLine(meals);
+        if (Settings.WelcomeStatus == (int)WelcomeStatusType.Unfinished)
+        {
+            List<string> statusChoices = new List<string> { AppResources.Student, AppResources.Staff, AppResources.Guest };
+            string chosenStatus = await DisplayActionSheet(AppResources.StatusQuery, AppResources.Cancel, null, statusChoices.ToArray());
+            if (!chosenStatus.Equals(AppResources.Cancel))
+            {
+                Settings.WelcomeStatus = (int)WelcomeStatusType.Finished;
+                Settings.Status = statusChoices.IndexOf(chosenStatus);
+            }
+        }
+        if (meals.Count > 0)
+        {
+            _viewModel.SetMeals(meals);
+        }
+        else
+        {
+            await DisplayAlert(AppResources.Error, AppResources.NoMeals, AppResources.OK);
+        }
     }
 
     private async void Error(Exception ex)
