@@ -7,7 +7,7 @@ namespace StudyCompanion
     [ContentProperty(nameof(Key))]
     public class LocalizeExtension : IMarkupExtension
     {
-        readonly IStringLocalizer<AppResources> _localizer;
+        readonly IStringLocalizer<AppResources>? _localizer;
 
         public string Key { get; set; } = string.Empty;
 
@@ -20,7 +20,7 @@ namespace StudyCompanion
 
         public object ProvideValue(
             IServiceProvider serviceProvider
-        ) => _localizer[Key];
+        ) => _localizer?[Key] ?? "No value found for key";
 
         object IMarkupExtension.ProvideValue(
             IServiceProvider serviceProvider

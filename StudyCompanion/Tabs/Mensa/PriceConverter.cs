@@ -14,9 +14,9 @@ namespace StudyCompanion
         {
             var price = Settings.Status switch
             {
-                0 => (double)((IPrice)value).Students,
-                1 => (double)((IPrice)value).Employees,
-                2 => (double)((IPrice)value).Others,
+                0 => (double?)((IPrice)value).Students,
+                1 => (double?)((IPrice)value).Employees,
+                2 => (double?)((IPrice)value).Others,
                 _ => 0.0,
             };
             var cultureInfo = CultureInfo.GetCultureInfo("de-DE");
