@@ -12,5 +12,6 @@
 	</PropertyGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\StudyCompanion.Ports\StudyCompanion.Ports.csproj" />
+	  <ProjectReference Include="..\StudyCompanion.Core\StudyCompanion.Core.csproj" />
 	</ItemGroup>
 </Project>

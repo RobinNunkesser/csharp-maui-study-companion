@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Italbytz.Adapters.Meal.OpenMensa;
 using Italbytz.Ports.Meal;
 
 namespace Italbytz.Adapters.Meal.Mock
@@ -14,11 +15,11 @@ namespace Italbytz.Adapters.Meal.Mock
         public Task<List<IMealCollection>> Execute(IMealQuery inDTO)
         {
             var collectionsList = new List<IMealCollection>() {
-                new MockMealCollection() {
+                new MealCollection() {
                     Category = Category.Dish,
                     Meals = Mocks.Dishes
                 },
-                new MockMealCollection() {
+                new MealCollection() {
                     Category = Category.Dessert,
                     Meals = Mocks.Desserts
                 }};

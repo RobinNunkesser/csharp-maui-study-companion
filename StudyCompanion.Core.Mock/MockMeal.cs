@@ -1,11 +1,11 @@
 ﻿using System;
 using Italbytz.Ports.Meal;
 
-namespace Italbytz.Adapters.Meal.Mock
+namespace Italbytz.Adapters.Meal.OpenMensa
 {
-    public class Meal : IMeal
+    public class MockMeal : IMeal
     {
-        public Meal()
+        public MockMeal()
         {
         }
 

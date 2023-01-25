@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using Italbytz.Ports.Meal;
 
-namespace Italbytz.Adapters.Meal.Mock
+namespace Italbytz.Adapters.Meal.OpenMensa
 {
-    public class MockMealCollection : IMealCollection
+    public class MealCollection : IMealCollection
     {
-        public MockMealCollection()
+        public MealCollection()
         {
         }
 
