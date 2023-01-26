@@ -29,6 +29,9 @@
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
 		<CreatePackage>false</CreatePackage>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -61,6 +64,19 @@
 		<None Remove="Tabs\Quiz\" />
 		<None Remove="Resources\Images\pie_chart_FILL0_wght400_GRAD0_opsz24.svg" />
 		<None Remove="Resources\Raw\acknowledgements.html" />
+		<None Remove="Plugin\" />
+		<None Remove="Plugin\Calendars\" />
+		<None Remove="Plugin\Calendars\Abstractions\" />
+		<None Remove="Platforms\Android\Plugin\" />
+		<None Remove="Platforms\iOS\Plugin\" />
+		<None Remove="Platforms\MacCatalyst\Plugin\" />
+		<None Remove="Platforms\Tizen\Plugin\" />
+		<None Remove="Platforms\Windows\Plugin\" />
+		<None Remove="Platforms\Android\Plugin\Calendars\" />
+		<None Remove="Platforms\iOS\Plugin\Calendars\" />
+		<None Remove="Platforms\MacCatalyst\Plugin\Calendars\" />
+		<None Remove="Platforms\Tizen\Plugin\Calendars\" />
+		<None Remove="Platforms\Windows\Plugin\Calendars\" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Resources\Strings\" />
@@ -71,6 +87,19 @@
 		<Folder Include="Tabs\Profs\" />
 		<Folder Include="Tabs\Settings\" />
 		<Folder Include="Tabs\Quiz\" />
+		<Folder Include="Plugin\" />
+		<Folder Include="Plugin\Calendars\" />
+		<Folder Include="Plugin\Calendars\Abstractions\" />
+		<Folder Include="Platforms\Android\Plugin\" />
+		<Folder Include="Platforms\iOS\Plugin\" />
+		<Folder Include="Platforms\MacCatalyst\Plugin\" />
+		<Folder Include="Platforms\Tizen\Plugin\" />
+		<Folder Include="Platforms\Windows\Plugin\" />
+		<Folder Include="Platforms\Android\Plugin\Calendars\" />
+		<Folder Include="Platforms\iOS\Plugin\Calendars\" />
+		<Folder Include="Platforms\MacCatalyst\Plugin\Calendars\" />
+		<Folder Include="Platforms\Tizen\Plugin\Calendars\" />
+		<Folder Include="Platforms\Windows\Plugin\Calendars\" />
 	</ItemGroup>
 	<ItemGroup>
 		<EmbeddedResource Update="Resources\Strings\AppResources.resx">
