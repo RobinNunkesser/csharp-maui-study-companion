@@ -21,7 +21,7 @@ public partial class MensaPage : ContentPage
         base.OnAppearing();
         try
         {
-            Success(await _service.Execute(new MealQuery() { Mensa = 42, Date = DateTime.Now }));
+            Success(await _service.Execute(new MealQuery() { Mensa = 35, Date = DateTime.Now }));
         }
         catch (Exception ex)
         {

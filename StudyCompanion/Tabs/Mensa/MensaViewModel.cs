@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using Italbytz.Ports.Meal;
+using StudyCompanion.Resources.Strings;
 
 namespace StudyCompanion
 {
@@ -17,19 +18,19 @@ namespace StudyCompanion
             Meals = new ObservableCollection<SectionViewModel<IMeal>>();
             mainDishes = new SectionViewModel<IMeal>()
             {
-                Header = "Essen"
+                Header = AppResources.Maindishes
             };
             soups = new SectionViewModel<IMeal>()
             {
-                Header = "Suppen"
+                Header = AppResources.Soups
             };
             sideDishes = new SectionViewModel<IMeal>()
             {
-                Header = "Beilagen"
+                Header = AppResources.Sidedishes
             };
             desserts = new SectionViewModel<IMeal>()
             {
-                Header = "Desserts"
+                Header = AppResources.Desserts
             };
             Meals.Add(mainDishes);
             Meals.Add(soups);
@@ -51,18 +52,21 @@ namespace StudyCompanion
                     case Category.Dessert:
                         foreach (var meal in mealCollection.Meals)
                         {
+                            if (excludeMeal(meal)) continue;
                             desserts.Add(meal);
                         }
                         break;
                     case Category.Dish:
                         foreach (var meal in mealCollection.Meals)
                         {
+                            if (excludeMeal(meal)) continue;
                             mainDishes.Add(meal);
                         }
                         break;
                     case Category.Soup:
                         foreach (var meal in mealCollection.Meals)
                         {
+                            if (excludeMeal(meal)) continue;
                             soups.Add(meal);
                         }
                         break;
@@ -71,11 +75,38 @@ namespace StudyCompanion
                     default:
                         foreach (var meal in mealCollection.Meals)
                         {
+                            if (excludeMeal(meal)) continue;
                             sideDishes.Add(meal);
                         }
                         break;
                 }
             }
+        }
+
+        bool excludeMeal(IMeal meal)
+        {
+            var excludeMeal = false;
+            foreach (Allergens flagToCheck in Enum.GetValues(typeof(Allergens)))
+            {
+                if (flagToCheck != Allergens.None &&
+                    meal.Allergens.HasFlag(flagToCheck) &&
+                    !Settings.Allergens.HasFlag(flagToCheck))
+                {
+                    excludeMeal = true;
+                    break;
+                }
+            }
+            foreach (Additives flagToCheck in Enum.GetValues(typeof(Additives)))
+            {
+                if (flagToCheck != Additives.None &&
+                    meal.Additives.HasFlag(flagToCheck) &&
+                    !Settings.Additives.HasFlag(flagToCheck))
+                {
+                    excludeMeal = true;
+                    break;
+                }
+            }
+            return excludeMeal;
         }
     }
 }
