@@ -2,6 +2,7 @@
 using Italbytz.Ports.Meal;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
+using Italbytz.Adapters.Meal.OpenMensa;
 
 namespace StudyCompanion;
 
@@ -18,7 +19,7 @@ public static class MauiProgram
     {
         var env = Environment.Production;
 #if DEBUG
-        env = Environment.Development;
+        //env = Environment.Development;
 #endif
         var builder = MauiApp.CreateBuilder();
         builder.UseMauiApp<App>().RegisterServices();
@@ -31,6 +32,8 @@ public static class MauiProgram
                 break;
             case Environment.Staging:
             case Environment.Production:
+                builder.Services.AddSingleton<IGetMealsService>(new OpenMensaGetMealsService(new OpenMensaMealDataSource(35, DateTime.Now)));
+                break;
             default:
                 break;
         }

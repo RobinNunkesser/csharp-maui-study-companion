@@ -16,8 +16,8 @@ public class Tests
     {
         try
         {
-            var service = new OpenMensaGetMealsService();
-            var collections = await service.Execute(new MockMealQuery() { Mensa = 42, Date = DateTime.Now });
+            var service = new OpenMensaGetMealsService(new OpenMensaMealDataSource(35, DateTime.Now));
+            var collections = await service.Execute(new MockMealQuery() { Mensa = 35, Date = DateTime.Now });
             Assert.True(collections.Count > 0);
         }
         catch (System.Exception ex)

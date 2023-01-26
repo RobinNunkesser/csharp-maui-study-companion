@@ -133,5 +133,7 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\StudyCompanion.Ports\StudyCompanion.Ports.csproj" />
 	  <ProjectReference Include="..\StudyCompanion.Core.Mock\StudyCompanion.Core.Mock.csproj" />
+	  <ProjectReference Include="..\StudyCompanion.Core\StudyCompanion.Core.csproj" />
+	  <ProjectReference Include="..\StudyCompanion.Infra\StudyCompanion.Infra.csproj" />
 	</ItemGroup>
 </Project>

@@ -9,7 +9,7 @@ namespace Italbytz.Adapters.Meal.OpenMensa
 {
     public class OpenMensaGetMealsService : IGetMealsService
     {
-        IDataSource<int, IMeal> _dataSource;
+        readonly IDataSource<int, IMeal> _dataSource;
 
         public OpenMensaGetMealsService(IDataSource<int, IMeal> dataSource)
         {
@@ -18,8 +18,6 @@ namespace Italbytz.Adapters.Meal.OpenMensa
 
         public async Task<List<IMealCollection>> Execute(IMealQuery inDTO)
         {
-            /*            var dataSource = new OpenMensaMealDataSource(inDTO.Mensa, inDTO.Date);*/
-
             var meals = await _dataSource.RetrieveAll();
             var collectionsList = new List<IMealCollection>();
             var collections = meals.GroupBy(meal => meal.Category);

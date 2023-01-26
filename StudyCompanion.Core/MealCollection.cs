@@ -11,7 +11,7 @@ namespace Italbytz.Adapters.Meal.OpenMensa
         }
 
         public Category Category { get; set; }
-        public List<IMeal> Meals { get; set; }
+        public List<IMeal> Meals { get; set; } = new();
     }
 }
 

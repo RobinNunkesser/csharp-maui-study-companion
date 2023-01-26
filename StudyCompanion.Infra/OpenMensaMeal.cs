@@ -18,6 +18,9 @@ namespace Italbytz.Infrastructure.OpenMensa
 
         [JsonPropertyName("notes")]
         public string[] Notes { get; set; }
+
+        [JsonPropertyName("image")]
+        public string Image { get; set; }
     }
 
     public partial class Prices
