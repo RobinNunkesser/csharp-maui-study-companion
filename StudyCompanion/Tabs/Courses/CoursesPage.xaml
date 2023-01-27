@@ -14,10 +14,11 @@
                         SelectionMode="Single"
                         SelectionChanged="OnCollectionViewSelectionChanged"
                         IsGrouped="True"
+                        ItemsSource="{Binding FilteredCourses}"
                         >
         <CollectionView.Header>
             <SearchBar x:Name="MainSearchBar" Placeholder="{local:Localize SearchTerm}" 
-                       TextChanged="OnSearchTextChanged"/>
+                       Text="{Binding SearchTerm}"/>
         </CollectionView.Header>
             <CollectionView.GroupHeaderTemplate>
             <DataTemplate>

@@ -1,7 +1,9 @@
 ﻿using System;
+using StudyCompanion.Ports;
+
 namespace StudyCompanion
 {
-    public class CourseViewModel
+    public class MockCourse : ICourse
     {
         public string Name { get; set; }
         public string Room { get; set; }

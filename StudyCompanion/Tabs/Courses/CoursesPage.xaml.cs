@@ -1,14 +1,19 @@
 ﻿using StudyCompanion.Resources.Strings;
 using Plugin.Calendars;
+using StudyCompanion.Ports;
+using Italbytz.Ports.Meal;
 
 namespace StudyCompanion
 {
     public partial class CoursesPage : ContentPage
     {
-        public CoursesPage()
+
+        readonly CoursesViewModel _viewModel;
+
+        public CoursesPage(CoursesViewModel viewModel)
         {
             InitializeComponent();
-            courses.ItemsSource = CourseDataService.GetGroupedCourses(CourseDataService.Courses);
+            BindingContext = _viewModel = viewModel;
         }
 
         private async Task DisplayIOSPermissionRequest()
@@ -106,14 +111,13 @@ namespace StudyCompanion
                 }
             }
 
-            CourseDataService.AddCourseToCalendar(e.CurrentSelection.FirstOrDefault() as CourseViewModel, selectedCalendar);
+            CourseDataService.AddCourseToCalendar(e.CurrentSelection.FirstOrDefault() as ICourse, selectedCalendar);
 
         }
 
         void OnSearchTextChanged(System.Object sender, TextChangedEventArgs e)
         {
             SearchBar searchBar = (SearchBar)sender;
-            courses.ItemsSource = CourseDataService.GetGroupedCourses(CourseDataService.GetSearchResults(searchBar.Text));
             searchBar.Focus();
         }
     }
