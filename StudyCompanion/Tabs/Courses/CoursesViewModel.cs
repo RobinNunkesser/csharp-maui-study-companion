@@ -11,7 +11,7 @@ namespace StudyCompanion
 {
     public class CoursesViewModel
     {
-        private List<ICourse> courses;
+        private readonly List<ICourse> courses;
         public SectionViewModel<ICourse>[] GroupedCourses { get; set; }
 
         private readonly IGetCoursesService _service;
@@ -30,7 +30,7 @@ namespace StudyCompanion
 
         private void SetGroupedCourses(List<ICourse> courses)
         {
-            SectionViewModel<ICourse>[] groups = new SectionViewModel<ICourse>[7];
+            SectionViewModel<ICourse>[] groups = new SectionViewModel<ICourse>[6];
             foreach (var group in courses.GroupBy(c => c.Semester))
             {
                 var section = new SectionViewModel<ICourse>()

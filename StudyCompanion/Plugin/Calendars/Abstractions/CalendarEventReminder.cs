@@ -18,7 +18,7 @@ namespace Plugin.Calendars.Abstractions
         /// </summary>
         public CalendarReminderMethod Method { get; set; } = CalendarReminderMethod.Default;
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (ReferenceEquals(this, obj))
             {

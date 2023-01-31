@@ -115,7 +115,7 @@ namespace StudyCompanion
 
         }
 
-        async void OnSearchTextChanged(System.Object sender, TextChangedEventArgs e)
+        void OnSearchTextChanged(System.Object sender, TextChangedEventArgs e)
         {
             SearchBar searchBar = (SearchBar)sender;
             _viewModel.Filter(searchBar.Text);

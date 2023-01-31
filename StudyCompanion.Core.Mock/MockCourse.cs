@@ -5,11 +5,11 @@ namespace StudyCompanion
 {
     public class MockCourse : ICourse
     {
-        public string Name { get; set; }
-        public string Room { get; set; }
-        public string Lecturer { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Room { get; set; } = string.Empty;
+        public string Lecturer { get; set; } = string.Empty;
         public string Detail => $"{Room} ({Lecturer})";
-        public string StartDate { get; set; }
+        public string StartDate { get; set; } = string.Empty;
         public int Semester { get; set; }
         public int Length { get; set; } = 120;
         public bool Biweekly { get; set; } = false;
