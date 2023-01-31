@@ -13,7 +13,7 @@ namespace StudyCompanion
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var startDate = DateTime.ParseExact((string)value, CourseDataService.longFormat, CultureInfo.InvariantCulture);
+            var startDate = DateTime.ParseExact((string)value, "dd.MM.yyyy HH:mm", CultureInfo.InvariantCulture);
 
             return startDate.ToString(weekdayFormat);
 

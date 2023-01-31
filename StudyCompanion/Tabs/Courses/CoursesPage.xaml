@@ -14,15 +14,14 @@
                         SelectionMode="Single"
                         SelectionChanged="OnCollectionViewSelectionChanged"
                         IsGrouped="True"
-                        ItemsSource="{Binding FilteredCourses}"
                         >
         <CollectionView.Header>
             <SearchBar x:Name="MainSearchBar" Placeholder="{local:Localize SearchTerm}" 
-                       Text="{Binding SearchTerm}"/>
+                       TextChanged="OnSearchTextChanged"/>
         </CollectionView.Header>
             <CollectionView.GroupHeaderTemplate>
             <DataTemplate>
-                <Label Text="{Binding LongName}" BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                <Label Text="{Binding Header}" BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
                        FontAttributes="Bold" Padding="20,4,20,4"/>
             </DataTemplate>
         </CollectionView.GroupHeaderTemplate>

@@ -4,7 +4,7 @@ using Italbytz.Ports.Common;
 
 namespace StudyCompanion.Ports
 {
-    public interface IGetCoursesService : IService<string, List<ICourseCollection>>
+    public interface IGetCoursesService : IService<List<ICourse>>
     {
     }
 }

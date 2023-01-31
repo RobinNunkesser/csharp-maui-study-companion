@@ -4,7 +4,7 @@ using Italbytz.Ports.Common;
 
 namespace Italbytz.Ports.Meal
 {
-    public interface IGetMealsService : IService<IMealQuery, List<IMealCollection>>
+    public interface IGetMealsService : IAsyncService<IMealQuery, List<IMealCollection>>
     {
     }
 }

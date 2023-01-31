@@ -7,13 +7,13 @@ namespace StudyCompanion
 {
     public partial class CoursesPage : ContentPage
     {
-
         readonly CoursesViewModel _viewModel;
 
         public CoursesPage(CoursesViewModel viewModel)
         {
             InitializeComponent();
             BindingContext = _viewModel = viewModel;
+            courses.ItemsSource = _viewModel.GroupedCourses;
         }
 
         private async Task DisplayIOSPermissionRequest()
@@ -111,13 +111,15 @@ namespace StudyCompanion
                 }
             }
 
-            CourseDataService.AddCourseToCalendar(e.CurrentSelection.FirstOrDefault() as ICourse, selectedCalendar);
+            _viewModel.AddCourseToCalendar(e.CurrentSelection.FirstOrDefault() as ICourse, selectedCalendar);
 
         }
 
-        void OnSearchTextChanged(System.Object sender, TextChangedEventArgs e)
+        async void OnSearchTextChanged(System.Object sender, TextChangedEventArgs e)
         {
             SearchBar searchBar = (SearchBar)sender;
+            _viewModel.Filter(searchBar.Text);
+            courses.ItemsSource = _viewModel.GroupedCourses;
             searchBar.Focus();
         }
     }

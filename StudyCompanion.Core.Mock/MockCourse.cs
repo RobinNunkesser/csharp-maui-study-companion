@@ -13,6 +13,7 @@ namespace StudyCompanion
         public int Semester { get; set; }
         public int Length { get; set; } = 120;
         public bool Biweekly { get; set; } = false;
+        public string DateFormat { get; set; } = "dd.MM.yyyy HH:mm";
     }
 }
 
