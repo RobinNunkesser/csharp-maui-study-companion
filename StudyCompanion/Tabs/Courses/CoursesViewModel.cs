@@ -12,7 +12,7 @@ namespace StudyCompanion
     public class CoursesViewModel
     {
         private readonly List<ICourse> courses;
-        public SectionViewModel<ICourse>[] GroupedCourses { get; set; }
+        public SectionViewModel<ICourse>[]? GroupedCourses { get; set; }
 
         private readonly IGetCoursesService _service;
 

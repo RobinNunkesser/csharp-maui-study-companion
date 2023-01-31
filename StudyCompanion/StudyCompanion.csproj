@@ -144,6 +144,9 @@
 			<SubType>
 			</SubType>
 		</MauiXaml>
+		<MauiXaml Update="Common\InternalBrowserPage.xaml">
+		  <SubType></SubType>
+		</MauiXaml>
 	</ItemGroup>
 	<ItemGroup>
 		<BundleResource Include="Resources\Images\courses.svg" />
