@@ -26,15 +26,18 @@
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Image Grid.RowSpan="2" 
                                Source="{Binding Image}" 
                                Aspect="AspectFill"
                                HeightRequest="60" 
-                               WidthRequest="60" />
+                               WidthRequest="60"
+                               Margin="0,0,10,0"/>
                         <Label Grid.Column="1" 
-                               Text="{Binding Name}" 
+                               Text="{Binding Name}"
+                               LineBreakMode="WordWrap"
+                               MaxLines="2"
                                FontAttributes="Bold" />
                         <Label Grid.Row="1"
                                Grid.Column="1" 
