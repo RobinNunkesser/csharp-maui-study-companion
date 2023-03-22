@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:StudyCompanion"
+             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
              x:Class="StudyCompanion.QuizStatisticsPage"
              x:DataType="local:QuizViewModel"
-             Title="{local:Localize Statistics}">
+             Title="{x:Static localization:AppResources.title_statistics}">
     <ContentPage.Content>
         <Grid RowSpacing="8">
             <Grid.RowDefinitions>
@@ -20,19 +21,19 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label Grid.Row="1" Grid.Column="0" 
-                   Text="{local:Localize label.sum}" HorizontalOptions="StartAndExpand"/>
+                   Text="{x:Static localization:AppResources.label_sum}" HorizontalOptions="StartAndExpand"/>
             <Label Grid.Row="1" Grid.Column="1" 
                    Text="{Binding AnsweredQuestions}" HorizontalOptions="End"/>
             <Label Grid.Row="2" Grid.Column="0"
-                   Text="{local:Localize label.correct}" HorizontalOptions="StartAndExpand"/>
+                   Text="{x:Static localization:AppResources.label_correct}" HorizontalOptions="StartAndExpand"/>
             <Label Grid.Row="2" Grid.Column="1"
                    Text="{Binding CorrectAnswers}" HorizontalOptions="End"/>
             <Label Grid.Row="3" Grid.Column="0" 
-                   Text="{local:Localize label.wrong}" HorizontalOptions="StartAndExpand"/>
+                   Text="{x:Static localization:AppResources.label_wrong}" HorizontalOptions="StartAndExpand"/>
             <Label Grid.Row="3" Grid.Column="1" 
                    Text="{Binding WrongAnswers}" HorizontalOptions="End"/>
             <Label Grid.Row="4" Grid.Column="0"
-                   Text="{local:Localize label.skipped}" HorizontalOptions="StartAndExpand"/>
+                   Text="{x:Static localization:AppResources.label_skipped}" HorizontalOptions="StartAndExpand"/>
             <Label Grid.Row="4" Grid.Column="1"
                    Text="{Binding SkippedQuestions}" HorizontalOptions="End"/>
         </Grid>

@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:StudyCompanion"
+             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
              x:Class="StudyCompanion.QuizPage"
              x:DataType="local:QuizViewModel"
-             Title="{local:Localize Quiz}">
+             Title="{x:Static localization:AppResources.Quiz}">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="statistics" 
                      Clicked="Statistics_Clicked" />
@@ -28,7 +29,7 @@
                    x:Name="answerLabel" Text="{Binding Answer}" HorizontalOptions="Center" 
                    VerticalOptions="Center" Opacity="0" />
             <Button Grid.Row="2" Grid.Column="0" 
-                    x:Name="falseButton" Text="{local:Localize Wrong}" HorizontalOptions="CenterAndExpand" 
+                    x:Name="falseButton" Text="{x:Static localization:AppResources.Wrong}" HorizontalOptions="CenterAndExpand" 
                     Clicked="Answer_Clicked"
                     Command="{Binding AnswerCommand}">
                 <Button.CommandParameter>
@@ -36,7 +37,7 @@
                 </Button.CommandParameter>
             </Button>
             <Button Grid.Row="2" Grid.Column="1" 
-                    x:Name="trueButton" Text="{local:Localize Right}" HorizontalOptions="CenterAndExpand" 
+                    x:Name="trueButton" Text="{x:Static localization:AppResources.Right}" HorizontalOptions="CenterAndExpand" 
                     Clicked="Answer_Clicked"
                     Command="{Binding AnswerCommand}">
                 <Button.CommandParameter>
@@ -44,7 +45,7 @@
                 </Button.CommandParameter>
             </Button>
             <Button Grid.Row="3" Grid.ColumnSpan="2" 
-                    x:Name="skipButton" Text="{local:Localize Skip}" HorizontalOptions="Center" VerticalOptions="End" 
+                    x:Name="skipButton" Text="{x:Static localization:AppResources.Skip}" HorizontalOptions="Center" VerticalOptions="End" 
                     Command="{Binding SkipCommand}"/>
         </Grid>
     </ContentPage.Content>

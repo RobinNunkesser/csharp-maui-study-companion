@@ -4,22 +4,23 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:StudyCompanion"
+    xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
     Shell.FlyoutBehavior="Disabled">
-
+    
     <TabBar>
-        <Tab Title="{local:Localize Mensa}" Icon="mensa">
+        <Tab Title="{x:Static localization:AppResources.Mensa}" Icon="mensa">
             <ShellContent ContentTemplate="{DataTemplate local:MensaPage}" />
         </Tab>
-        <Tab Title="{local:Localize Quiz}" Icon="quiz">
+        <Tab Title="{x:Static localization:AppResources.Quiz}" Icon="quiz">
             <ShellContent ContentTemplate="{DataTemplate local:QuizPage}" />
         </Tab>
-        <Tab Title="{local:Localize Courses}" Icon="courses">
+        <Tab Title="{x:Static localization:AppResources.Courses}" Icon="courses">
             <ShellContent ContentTemplate="{DataTemplate local:CoursesPage}" />
         </Tab>
-        <Tab Title="{local:Localize Profs}" Icon="profs">
+        <Tab Title="{x:Static localization:AppResources.Profs}" Icon="profs">
             <ShellContent ContentTemplate="{DataTemplate local:ProfsPage}" />
         </Tab>
-        <Tab Title="{local:Localize Settings}" Icon="settings">
+        <Tab Title="{x:Static localization:AppResources.Settings}" Icon="settings">
             <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
         </Tab>
     </TabBar>

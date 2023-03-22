@@ -1,28 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:StudyCompanion"   
+             xmlns:local="clr-namespace:StudyCompanion"
+             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
              x:Class="StudyCompanion.AdditivesPage"
-             Title="{local:Localize Additives}">
+             Title="{x:Static localization:AppResources.Additives}">
     <ContentPage.Content>
                 <TableView Intent="Settings">
             <TableRoot>
                 <TableSection>
-                    <SwitchCell Text="{local:Localize Z1}" On="{Binding A1}"/>
-                    <SwitchCell Text="{local:Localize Z2}" On="{Binding A2}"/>
-                    <SwitchCell Text="{local:Localize Z3}" On="{Binding A3}"/>
-                    <SwitchCell Text="{local:Localize Z4}" On="{Binding A4}"/>
-                    <SwitchCell Text="{local:Localize Z5}" On="{Binding A5}"/>
-                    <SwitchCell Text="{local:Localize Z6}" On="{Binding A6}"/>
-                    <SwitchCell Text="{local:Localize Z7}" On="{Binding A7}"/>
-                    <SwitchCell Text="{local:Localize Z8}" On="{Binding A8}"/>
-                    <SwitchCell Text="{local:Localize Z9}" On="{Binding A9}"/>
-                    <SwitchCell Text="{local:Localize Z10}" On="{Binding A10}"/>
-                    <SwitchCell Text="{local:Localize Z11}" On="{Binding A11}"/>
-                    <SwitchCell Text="{local:Localize Z12}" On="{Binding A12}"/>
-                    <SwitchCell Text="{local:Localize Z13}" On="{Binding A13}"/>
-                    <SwitchCell Text="{local:Localize Z14}" On="{Binding A14}"/>
-                    <SwitchCell Text="{local:Localize Z15}" On="{Binding A15}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z1}" On="{Binding A1}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z2}" On="{Binding A2}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z3}" On="{Binding A3}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z4}" On="{Binding A4}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z5}" On="{Binding A5}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z6}" On="{Binding A6}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z7}" On="{Binding A7}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z8}" On="{Binding A8}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z9}" On="{Binding A9}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z10}" On="{Binding A10}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z11}" On="{Binding A11}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z12}" On="{Binding A12}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z13}" On="{Binding A13}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z14}" On="{Binding A14}"/>
+                    <SwitchCell Text="{x:Static localization:AppResources.Z15}" On="{Binding A15}"/>
                     </TableSection>
                 </TableRoot>
             </TableView>

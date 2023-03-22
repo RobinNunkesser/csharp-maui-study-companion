@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
              xmlns:local="clr-namespace:StudyCompanion"
     x:Class="StudyCompanion.CoursesPage"
-    Title="{local:Localize Courses}">
+    Title="{x:Static localization:AppResources.Courses}">
     <ContentPage.Resources>
 		<ResourceDictionary>
 			<local:DateConverter x:Key="dateConverter" />
@@ -16,7 +17,7 @@
                         IsGrouped="True"
                         >
         <CollectionView.Header>
-            <SearchBar x:Name="MainSearchBar" Placeholder="{local:Localize SearchTerm}" 
+            <SearchBar x:Name="MainSearchBar" Placeholder="{x:Static localization:AppResources.SearchTerm}" 
                        TextChanged="OnSearchTextChanged"/>
         </CollectionView.Header>
             <CollectionView.GroupHeaderTemplate>

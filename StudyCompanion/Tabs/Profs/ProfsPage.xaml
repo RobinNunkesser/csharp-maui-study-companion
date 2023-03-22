@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:StudyCompanion"
+             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
              x:Class="StudyCompanion.ProfsPage"
-             Title="{local:Localize Profs}">
+             Title="{x:Static localization:AppResources.Profs}">
     <ContentPage.Content>
         <TableView Intent="Data">
             <TableRoot>

@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:StudyCompanion"
+             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
              x:Class="StudyCompanion.MensaPage"
-             Title="{local:Localize Mensa}">
+             Title="{x:Static localization:AppResources.Mensa}">
     <ContentPage.Resources>
 		<ResourceDictionary>
 			<local:PriceConverter x:Key="priceConverter" />

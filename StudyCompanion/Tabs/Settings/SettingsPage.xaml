@@ -2,22 +2,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:StudyCompanion"
+             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
              x:Class="StudyCompanion.SettingsPage"
-             Title="{local:Localize Settings}">
+             Title="{x:Static localization:AppResources.Settings}">
     <ContentPage.Content>
         <TableView Intent="Settings">
             <TableRoot>
-                <TableSection Title="{local:Localize Settings}">
+                <TableSection Title="{x:Static localization:AppResources.Settings}">
                     <ViewCell>
                         <ViewCell.View>
                             <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
-                                <Label Text="{local:Localize Status}"
+                                <Label Text="{x:Static localization:AppResources.Status}"
                                        HorizontalOptions="StartAndExpand"
                                        VerticalOptions="Center"
                                        TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}"/>
                                 <Picker
                                     x:Name="StatusPicker"
-                                    Title="{local:Localize Status}"
+                                    Title="{x:Static localization:AppResources.Status}"
                                     HorizontalOptions="EndAndExpand"
                                     SelectedIndex="{Binding Status}"
                                     >
@@ -32,11 +33,11 @@
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>
-                    <TextCell Text="{local:Localize Allergens}"
+                    <TextCell Text="{x:Static localization:AppResources.Allergens}"
                                Command="{Binding NavigateCommand}"
                                CommandParameter="{x:Type local:AllergensPage}"
                                />                
-                     <TextCell Text="{local:Localize Additives}"
+                     <TextCell Text="{x:Static localization:AppResources.Additives}"
                                Command="{Binding NavigateCommand}"
                                CommandParameter="{x:Type local:AdditivesPage}"
                                />                
