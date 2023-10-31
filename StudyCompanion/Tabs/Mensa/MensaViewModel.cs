@@ -1,10 +1,12 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using Italbytz.Ports.Meal;
 using StudyCompanion.Resources.Strings;
 
 namespace StudyCompanion
 {
-    public class MensaViewModel
+    public class MensaViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<SectionViewModel<IMeal>> Meals { get; set; }
 
@@ -14,6 +16,10 @@ namespace StudyCompanion
         private SectionViewModel<IMeal> desserts;
 
         public MensaViewModel()
+        {
+        }
+
+        internal void SetMeals(List<IMealCollection> meals)
         {
             Meals = new ObservableCollection<SectionViewModel<IMeal>>();
             mainDishes = new SectionViewModel<IMeal>()
@@ -36,15 +42,6 @@ namespace StudyCompanion
             Meals.Add(soups);
             Meals.Add(sideDishes);
             Meals.Add(desserts);
-
-        }
-
-        internal void SetMeals(List<IMealCollection> meals)
-        {
-            mainDishes.Clear();
-            soups.Clear();
-            sideDishes.Clear();
-            desserts.Clear();
             foreach (var mealCollection in meals)
             {
                 switch (mealCollection.Category)
@@ -81,6 +78,7 @@ namespace StudyCompanion
                         break;
                 }
             }
+            OnPropertyChanged("Meals");
         }
 
         bool excludeMeal(IMeal meal)
@@ -108,5 +106,12 @@ namespace StudyCompanion
             }
             return excludeMeal;
         }
+
+        #region INotifyPropertyChanged implementation
+        public event PropertyChangedEventHandler? PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName] string name = "") =>
+          PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        #endregion
+
     }
 }

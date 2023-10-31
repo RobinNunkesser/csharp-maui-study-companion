@@ -10,6 +10,9 @@
 			<local:PriceConverter x:Key="priceConverter" />
 		</ResourceDictionary>
 	</ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="ToolbarItem_Clicked" IconImageSource="info_black_24dp.png" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <CollectionView IsGrouped="true" ItemsSource="{Binding Meals}">
             <CollectionView.GroupHeaderTemplate>

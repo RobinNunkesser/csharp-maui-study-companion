@@ -76,6 +76,7 @@
 		<None Remove="Platforms\MacCatalyst\Plugin\Calendars\" />
 		<None Remove="Platforms\Tizen\Plugin\Calendars\" />
 		<None Remove="Platforms\Windows\Plugin\Calendars\" />
+		<None Remove="Resources\Images\info_black_24dp.svg" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Resources\Strings\" />
@@ -155,6 +156,7 @@
 		<BundleResource Include="Resources\Images\quiz.svg" />
 		<BundleResource Include="Resources\Images\statistics.svg" />
 		<BundleResource Include="Resources\Raw\acknowledgements.html" />
+		<BundleResource Include="Resources\Images\info_black_24dp.svg" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Resources\Strings\AppResources.Designer.cs">
