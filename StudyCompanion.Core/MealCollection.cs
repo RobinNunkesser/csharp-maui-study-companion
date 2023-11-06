@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Italbytz.Ports.Meal;
 
-namespace Italbytz.Adapters.Meal.OpenMensa
+namespace Italbytz.Adapters.Meal
 {
     public class MealCollection : IMealCollection
     {
