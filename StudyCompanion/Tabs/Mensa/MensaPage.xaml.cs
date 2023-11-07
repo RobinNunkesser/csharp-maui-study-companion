@@ -56,8 +56,6 @@ public partial class MensaPage : ContentPage
         await DisplayAlert(StudyCompanion.Resources.Strings.AppResources.Error, StudyCompanion.Resources.Strings.AppResources.ErrorMessage, StudyCompanion.Resources.Strings.AppResources.OK);
     }
 
-    void ToolbarItem_Clicked(object sender, System.EventArgs e)
-    {
-    }
+    async void ToolbarItem_Clicked(object sender, System.EventArgs e) => await this.ToolbarItemClicked();
 
 }
