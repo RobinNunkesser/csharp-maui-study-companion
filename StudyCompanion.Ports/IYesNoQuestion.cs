@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StudyCompanion.Ports
+namespace Italbytz.Ports.Trivia
 {
     public interface IYesNoQuestion : IQuestion
     {

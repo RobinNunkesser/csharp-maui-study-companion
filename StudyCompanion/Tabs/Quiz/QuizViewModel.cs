@@ -2,34 +2,15 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using Italbytz.Extensions;
+using Italbytz.Ports.Trivia;
 
 namespace StudyCompanion
 {
     public class QuizViewModel : INotifyPropertyChanged
     {
-        private readonly List<YesNoQuestion> questions = new List<YesNoQuestion>
-        {
-            new YesNoQuestion() {
-                Text = Resources.Strings.AppResources.question_1,
-                Answer = true
-            },
-            new YesNoQuestion() {
-                Text = Resources.Strings.AppResources.question_2,
-                Answer = true
-            },
-            new YesNoQuestion() {
-                Text = Resources.Strings.AppResources.question_3,
-                Answer = false
-            },
-            new YesNoQuestion() {
-                Text = Resources.Strings.AppResources.question_4,
-                Answer = true
-            },
-            new YesNoQuestion() {
-                Text = Resources.Strings.AppResources.question_5,
-                Answer = false
-            },
-        };
+        private readonly IQuestion[] _questions;
+        private Random _random = new();
 
         public int AnsweredQuestions => CorrectAnswers + WrongAnswers
                                                        + SkippedQuestions;
@@ -37,7 +18,7 @@ namespace StudyCompanion
         public int WrongAnswers { get; private set; } = 0;
         public int SkippedQuestions { get; private set; } = 0;
 
-        public string Question => questions[index].Text;
+        public string Question => _questions[index].Text;
         public ICommand AnswerCommand { get; private set; }
         public ICommand SkipCommand { get; private set; }
 
@@ -70,24 +51,29 @@ namespace StudyCompanion
         }
 
 
-        public QuizViewModel()
+        public QuizViewModel(IQuestion[] questions)
         {
-            Index = 0;
+            _questions = questions;
+            _random.Shuffle(_questions);
+            OnPropertyChanged(nameof(Question));
             AnswerCommand = new Command<bool>(EvaluateAnswer);
             SkipCommand = new Command(Skip);
         }
 
         void EvaluateAnswer(bool value)
         {
-            if (questions[index].Answer == value)
+            if (_questions[index] is IYesNoQuestion)
             {
-                CorrectAnswers++;
-                Answer = Resources.Strings.AppResources.Right;
-            }
-            else
-            {
-                WrongAnswers++;
-                Answer = Resources.Strings.AppResources.Wrong;
+                if (((IYesNoQuestion)_questions[index]).Answer == value)
+                {
+                    CorrectAnswers++;
+                    Answer = Resources.Strings.AppResources.Right;
+                }
+                else
+                {
+                    WrongAnswers++;
+                    Answer = Resources.Strings.AppResources.Wrong;
+                }
             }
             IncreaseIndex();
         }
@@ -100,7 +86,7 @@ namespace StudyCompanion
 
         void IncreaseIndex()
         {
-            Index = (Index + 1) % questions.Count;
+            Index = (Index + 1) % _questions.Length;
         }
 
         #region INotifyPropertyChanged implementation

@@ -1,4 +1,4 @@
-﻿using Italbytz.Ports.Meal;
+﻿using Italbytz.Ports.Trivia;
 
 namespace StudyCompanion;
 

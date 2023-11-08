@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Italbytz.Adapters.Meal.OpenMensa;
 using StudyCompanion.Core.Mock;
 using StudyCompanion.Ports;
+using Italbytz.Ports.Trivia;
 
 namespace StudyCompanion;
 
@@ -49,7 +50,7 @@ public static class MauiProgram
     )
     {
         mauiAppBuilder.Services.AddSingleton<QuizPage>();
-        mauiAppBuilder.Services.AddSingleton<QuizViewModel>();
+        mauiAppBuilder.Services.AddSingleton(new QuizViewModel(QuestionRepository.Questions));
         mauiAppBuilder.Services.AddSingleton<QuizStatisticsPage>();
         mauiAppBuilder.Services.AddSingleton<MensaPage>();
         mauiAppBuilder.Services.AddSingleton<MensaViewModel>();
