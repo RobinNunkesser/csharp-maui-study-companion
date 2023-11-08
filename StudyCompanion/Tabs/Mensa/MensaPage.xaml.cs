@@ -53,7 +53,7 @@ public partial class MensaPage : ContentPage
 
     private async void Error(Exception ex)
     {
-        await DisplayAlert(StudyCompanion.Resources.Strings.AppResources.Error, StudyCompanion.Resources.Strings.AppResources.ErrorMessage, StudyCompanion.Resources.Strings.AppResources.OK);
+        await DisplayAlert(AppResources.Error, AppResources.ErrorMessage, AppResources.OK);
     }
 
     async void ToolbarItem_Clicked(object sender, System.EventArgs e) => await this.ToolbarItemClicked();

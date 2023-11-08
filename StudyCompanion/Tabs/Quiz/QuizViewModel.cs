@@ -67,12 +67,12 @@ namespace StudyCompanion
                 if (((IYesNoQuestion)_questions[index]).Answer == value)
                 {
                     CorrectAnswers++;
-                    Answer = Resources.Strings.AppResources.Right;
+                    Answer = AppResources.Right;
                 }
                 else
                 {
                     WrongAnswers++;
-                    Answer = Resources.Strings.AppResources.Wrong;
+                    Answer = AppResources.Wrong;
                 }
             }
             IncreaseIndex();
