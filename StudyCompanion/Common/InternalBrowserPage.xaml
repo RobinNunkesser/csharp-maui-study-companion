@@ -4,8 +4,6 @@
              x:Class="StudyCompanion.InternalBrowserPage"
              >
     <ContentPage.Content>
-        <VerticalStackLayout>
-            <WebView x:Name="Browser" HeightRequest="1000" WidthRequest="1000"/>
-        </VerticalStackLayout>        
+        <WebView x:Name="Browser"/>
     </ContentPage.Content>
 </ContentPage>

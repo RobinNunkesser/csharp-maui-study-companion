@@ -2,7 +2,7 @@
 
 public partial class InternalBrowserPage : ContentPage
 {
-    public InternalBrowserPage(string source)
+    public InternalBrowserPage(WebViewSource source)
     {
         InitializeComponent();
         Browser.Source = source;
