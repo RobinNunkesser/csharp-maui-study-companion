@@ -29,15 +29,17 @@
                    x:Name="answerLabel" Text="{Binding Answer}" HorizontalOptions="Center" 
                    VerticalOptions="Center" Opacity="0" />
             <Button Grid.Row="2" Grid.Column="0" 
-                    x:Name="falseButton" Text="{x:Static localization:AppResources.Wrong}" HorizontalOptions="CenterAndExpand" 
-                    Clicked="Answer_Clicked"
+                    Text="{x:Static localization:AppResources.Wrong}" HorizontalOptions="CenterAndExpand" 
+                    IsEnabled="{Binding ButtonsEnabled}"
+                    Clicked="Answer_Clicked"                    
                     Command="{Binding AnswerCommand}">
                 <Button.CommandParameter>
                     <x:Boolean>False</x:Boolean>
                 </Button.CommandParameter>
             </Button>
             <Button Grid.Row="2" Grid.Column="1" 
-                    x:Name="trueButton" Text="{x:Static localization:AppResources.Right}" HorizontalOptions="CenterAndExpand" 
+                    Text="{x:Static localization:AppResources.Right}" HorizontalOptions="CenterAndExpand" 
+                    IsEnabled="{Binding ButtonsEnabled}"
                     Clicked="Answer_Clicked"
                     Command="{Binding AnswerCommand}">
                 <Button.CommandParameter>
@@ -45,7 +47,8 @@
                 </Button.CommandParameter>
             </Button>
             <Button Grid.Row="3" Grid.ColumnSpan="2" 
-                    x:Name="skipButton" Text="{x:Static localization:AppResources.Skip}" HorizontalOptions="Center" VerticalOptions="End" 
+                    Text="{x:Static localization:AppResources.Skip}" HorizontalOptions="Center" VerticalOptions="End" 
+                    IsEnabled="{Binding ButtonsEnabled}"
                     Command="{Binding SkipCommand}"/>
         </Grid>
     </ContentPage.Content>

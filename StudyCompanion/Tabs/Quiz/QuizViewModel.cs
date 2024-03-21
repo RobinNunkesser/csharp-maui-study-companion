@@ -10,7 +10,7 @@ namespace StudyCompanion
     public class QuizViewModel : INotifyPropertyChanged
     {
         private readonly IQuestion[] _questions;
-        private Random _random = new();
+        private readonly Random _random = new();
 
         public int AnsweredQuestions => CorrectAnswers + WrongAnswers
                                                        + SkippedQuestions;
@@ -21,6 +21,20 @@ namespace StudyCompanion
         public string Question => _questions[index].Text;
         public ICommand AnswerCommand { get; private set; }
         public ICommand SkipCommand { get; private set; }
+
+        private bool buttonsEnabled = true;
+        public bool ButtonsEnabled
+        {
+            get => buttonsEnabled;
+            set
+            {
+                if (value != buttonsEnabled)
+                {
+                    buttonsEnabled = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
         private string answer = string.Empty;
         public string Answer
