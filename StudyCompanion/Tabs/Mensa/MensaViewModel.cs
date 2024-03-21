@@ -6,14 +6,16 @@ using StudyCompanion.Resources.Strings;
 
 namespace StudyCompanion
 {
+    public class MealSectionViewModel : SectionViewModel<IMeal> { }
+
     public class MensaViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<SectionViewModel<IMeal>> Meals { get; set; }
+        public ObservableCollection<MealSectionViewModel> Meals { get; set; }
 
-        private SectionViewModel<IMeal> mainDishes;
-        private SectionViewModel<IMeal> soups;
-        private SectionViewModel<IMeal> sideDishes;
-        private SectionViewModel<IMeal> desserts;
+        private MealSectionViewModel mainDishes;
+        private MealSectionViewModel soups;
+        private MealSectionViewModel sideDishes;
+        private MealSectionViewModel desserts;
 
         public MensaViewModel()
         {
@@ -21,20 +23,20 @@ namespace StudyCompanion
 
         internal void SetMeals(List<IMealCollection> meals)
         {
-            Meals = new ObservableCollection<SectionViewModel<IMeal>>();
-            mainDishes = new SectionViewModel<IMeal>()
+            Meals = new ObservableCollection<MealSectionViewModel>();
+            mainDishes = new MealSectionViewModel()
             {
                 Header = AppResources.Maindishes
             };
-            soups = new SectionViewModel<IMeal>()
+            soups = new MealSectionViewModel()
             {
                 Header = AppResources.Soups
             };
-            sideDishes = new SectionViewModel<IMeal>()
+            sideDishes = new MealSectionViewModel()
             {
                 Header = AppResources.Sidedishes
             };
-            desserts = new SectionViewModel<IMeal>()
+            desserts = new MealSectionViewModel()
             {
                 Header = AppResources.Desserts
             };
