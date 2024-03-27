@@ -14,11 +14,11 @@ namespace StudyCompanion
     {
         private static readonly string shortFormat = "dd.MM.yyyy";
 
-        public static DateTime SemesterEnd { get; } = DateTime.ParseExact("21.01.2024", shortFormat, CultureInfo.InvariantCulture);
+        public static DateTime SemesterEnd { get; } = DateTime.ParseExact("07.07.2024", shortFormat, CultureInfo.InvariantCulture);
 
         public static List<DateTime> Holidays { get; } = new List<DateTime>
         {
-            DateTime.ParseExact("03.10.2023",shortFormat, CultureInfo.InvariantCulture),
+            /*DateTime.ParseExact("03.10.2023",shortFormat, CultureInfo.InvariantCulture),
             DateTime.ParseExact("01.11.2023",shortFormat, CultureInfo.InvariantCulture),
             DateTime.ParseExact("24.12.2023",shortFormat, CultureInfo.InvariantCulture),
             DateTime.ParseExact("25.12.2023",shortFormat, CultureInfo.InvariantCulture),
@@ -28,18 +28,17 @@ namespace StudyCompanion
             DateTime.ParseExact("29.12.2023",shortFormat, CultureInfo.InvariantCulture),
             DateTime.ParseExact("30.12.2023",shortFormat, CultureInfo.InvariantCulture),
             DateTime.ParseExact("31.12.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("01.01.2024",shortFormat, CultureInfo.InvariantCulture),
-            /*DateTime.ParseExact("07.04.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("10.04.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("11.04.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("12.04.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("13.04.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("14.04.2024",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("01.01.2024",shortFormat, CultureInfo.InvariantCulture),*/
+            DateTime.ParseExact("01.04.2024",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("02.04.2024",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("03.04.2024",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("04.04.2024",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("05.04.2024",shortFormat, CultureInfo.InvariantCulture),
             DateTime.ParseExact("01.05.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("18.05.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("29.05.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("30.05.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("08.06.2024",shortFormat, CultureInfo.InvariantCulture)*/
+            DateTime.ParseExact("09.05.2024",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("20.05.2024",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("21.05.2024",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("30.05.2024",shortFormat, CultureInfo.InvariantCulture)
         };
 
         private readonly List<ICourse> courses;
