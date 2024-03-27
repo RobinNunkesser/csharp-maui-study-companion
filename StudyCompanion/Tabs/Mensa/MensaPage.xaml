@@ -2,9 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:StudyCompanion"             
-             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
-             xmlns:ports="clr-namespace:Italbytz.Ports.Meal;assembly=StudyCompanion.Ports"
-             x:DataType="local:MensaViewModel"
+             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"                          
              x:Class="StudyCompanion.MensaPage"
              Title="{x:Static localization:AppResources.Mensa}">
     <ContentPage.Resources>
@@ -18,13 +16,13 @@
     <ContentPage.Content>
         <CollectionView IsGrouped="true" ItemsSource="{Binding Meals}">
             <CollectionView.GroupHeaderTemplate>
-                <DataTemplate x:DataType="local:MealSectionViewModel">
+                <DataTemplate>
                     <Label Text="{Binding Header}" BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
                        FontSize="Medium" FontAttributes="Bold" Padding="10"/>
                 </DataTemplate>
             </CollectionView.GroupHeaderTemplate>
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="ports:IMeal">
+                <DataTemplate>
                     <Grid Padding="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
