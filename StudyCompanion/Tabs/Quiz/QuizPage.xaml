@@ -24,12 +24,13 @@
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.ColumnSpan="2" 
                    Text="{Binding Question}" HorizontalOptions="Center" 
-                   VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                   VerticalOptions="Center" HorizontalTextAlignment="Center"/>
             <Label Grid.Row="1" Grid.ColumnSpan="2" 
                    x:Name="answerLabel" Text="{Binding Answer}" HorizontalOptions="Center" 
                    VerticalOptions="Center" Opacity="0" />
             <Button Grid.Row="2" Grid.Column="0" 
-                    Text="{x:Static localization:AppResources.Wrong}" HorizontalOptions="CenterAndExpand" 
+                    Text="{x:Static localization:AppResources.Wrong}"
+                    HorizontalOptions="Center" 
                     IsEnabled="{Binding ButtonsEnabled}"
                     Clicked="Answer_Clicked"                    
                     Command="{Binding AnswerCommand}">
@@ -38,7 +39,8 @@
                 </Button.CommandParameter>
             </Button>
             <Button Grid.Row="2" Grid.Column="1" 
-                    Text="{x:Static localization:AppResources.Right}" HorizontalOptions="CenterAndExpand" 
+                    Text="{x:Static localization:AppResources.Right}"
+                    HorizontalOptions="Center" 
                     IsEnabled="{Binding ButtonsEnabled}"
                     Clicked="Answer_Clicked"
                     Command="{Binding AnswerCommand}">

@@ -7,7 +7,8 @@
              x:DataType="local:QuizViewModel"
              Title="{x:Static localization:AppResources.title_statistics}">
     <ContentPage.Content>
-        <Grid RowSpacing="8">
+        <Grid RowSpacing="8"
+              Padding="16,0,16,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
