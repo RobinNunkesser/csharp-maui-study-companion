@@ -1,52 +1,58 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:StudyCompanion"
              xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
              x:Class="StudyCompanion.SettingsPage"
-             Title="{x:Static localization:AppResources.Settings}">
+             Title="{x:Static localization:AppResources.Settings}"
+             x:DataType="local:SettingsViewModel">
     <ContentPage.Content>
-        <TableView Intent="Settings">
+        <TableView Intent="Settings" HasUnevenRows="True">
             <TableRoot>
-                <TableSection Title="{x:Static localization:AppResources.Settings}">
+                <TableSection
+                    Title="{x:Static localization:AppResources.Settings}">
                     <ViewCell>
                         <ViewCell.View>
-                            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
-                                <Label Text="{x:Static localization:AppResources.Status}"
-                                       HorizontalOptions="StartAndExpand"
-                                       VerticalOptions="Center"
-                                       TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}"/>
-                                <Picker
-                                    x:Name="StatusPicker"
-                                    Title="{x:Static localization:AppResources.Status}"
-                                    HorizontalOptions="EndAndExpand"
-                                    SelectedIndex="{Binding Status}"
-                                    >
-                                    <Picker.ItemsSource>
-                                        <x:Array Type="{x:Type x:String}">
-                                            <x:String>Studierende</x:String>
-                                            <x:String>Bedienstete</x:String>
-                                            <x:String>Gäste</x:String>
-                                        </x:Array>
-                                    </Picker.ItemsSource>
-                                </Picker>
-                            </StackLayout>
+                            <Grid Padding="20,0,20,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0"
+                                       Grid.ColumnSpan="3"
+                                       Text="{x:Static localization:AppResources.Status}"
+                                       TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}" />
+                                <RadioButton Grid.Column="0" Grid.Row="1"
+                                             Content="{x:Static localization:AppResources.Student}"
+                                             IsChecked="{Binding StatusStudent}" />
+                                <RadioButton Grid.Column="1" Grid.Row="1"
+                                             Content="{x:Static localization:AppResources.Staff}"
+                                             IsChecked="{Binding StatusStaff}" />
+                                <RadioButton Grid.Column="2" Grid.Row="1"
+                                             Content="{x:Static localization:AppResources.Guest}"
+                                             IsChecked="{Binding StatusOther}" />
+                            </Grid>
                         </ViewCell.View>
                     </ViewCell>
-                    <TextCell Text="{x:Static localization:AppResources.Allergens}"
-                               Command="{Binding NavigateCommand}"
-                               CommandParameter="{x:Type local:AllergensPage}"
-                               />                
-                     <TextCell Text="{x:Static localization:AppResources.Additives}"
-                               Command="{Binding NavigateCommand}"
-                               CommandParameter="{x:Type local:AdditivesPage}"
-                               />                
+                    <TextCell
+                        Text="{x:Static localization:AppResources.Allergens}"
+                        Command="{Binding NavigateCommand}"
+                        CommandParameter="{x:Type local:AllergensPage}" />
+                    <TextCell
+                        Text="{x:Static localization:AppResources.Additives}"
+                        Command="{Binding NavigateCommand}"
+                        CommandParameter="{x:Type local:AdditivesPage}" />
                 </TableSection>
                 <TableSection Title="Acknowledgements / Licenses">
                     <TextCell Text="Acknowledgements"
                               Command="{Binding NavigateCommand}"
-                               CommandParameter="{x:Type local:AcknowledgementsPage}"
-                               />
+                              CommandParameter="{x:Type local:AcknowledgementsPage}" />
                 </TableSection>
             </TableRoot>
         </TableView>

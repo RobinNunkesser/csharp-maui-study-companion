@@ -41,4 +41,44 @@
     <Color x:Key="Blue200Accent">#72ACF1</Color>
     <Color x:Key="Blue300Accent">#A7CBF6</Color>
 
+    <Color x:Key="BackgroundColorDark">#000000</Color>
+        <Color x:Key="BackgroundColorLight">#ffffff</Color>
+        <Color x:Key="TextColorDark">#ffffff</Color>
+        <Color x:Key="TextColorLight">#2F2F2F</Color>
+
+        <Color x:Key="HeaderBarBackgroundColorLight">#ffffff</Color>
+        <Color x:Key="HeaderBarBackgroundColorDark">#101010</Color>
+        <Color x:Key="HeaderBarTextColorLight">#020202</Color>
+        <Color x:Key="HeaderBarTextColorDark">#FFFFFF</Color>
+
+        <Color x:Key="HeaderMenuBackgroundColorLight">#F7F7F7</Color>
+        <Color x:Key="HeaderMenuBackgroundColorDark">#101010</Color>
+        <Color x:Key="HeaderMenuTextColorLight">#020202</Color>
+        <Color x:Key="HeaderMenuTextColorDark">#FFFFFF</Color>
+
+        <Color x:Key="TabBarBackgroundColorLight">#ffffff</Color>
+        <Color x:Key="TabBarBackgroundColorDark">#101010</Color>
+        <Color x:Key="TabBarForegroundColorLight">#007aff</Color>
+        <Color x:Key="TabBarForegroundColorDark">#007aff</Color>
+        <Color x:Key="TabBarUnselectedColorLight">#959595</Color>
+        <Color x:Key="TabBarUnselectedColorDark">#959595</Color>
+        <Color x:Key="TabBarTitleColorLight">#007aff</Color>
+        <Color x:Key="TabBarTitleColorDark">#007aff</Color>
+
+        <Color x:Key="ButtonBackgroundColorLight">#2196F3</Color>
+        <Color x:Key="ButtonBackgroundColorDark">#2196F3</Color>
+        <Color x:Key="ButtonBackgroundDisabledColorLight">#332196F3</Color>
+        <Color x:Key="ButtonBackgroundDisabledColorDark">#332196F3</Color>
+        <Color x:Key="ButtonTextColorLight">#FFFFFF</Color>
+        <Color x:Key="ButtonTextColorDark">#FFFFFF</Color>
+
+
+        <Color x:Key="AccentColorLight">#96d1ff</Color>
+        <Color x:Key="AccentColorDark">#111111</Color>
+
+
+        <Color x:Key="PrimaryBackgroundDark">#2196F3</Color>
+        <Color x:Key="PrimaryBackgroundLight">#2196F3</Color>
+        <Color x:Key="PrimaryTextDark">#ffffff</Color>
+        <Color x:Key="PrimaryTextLight">#ffffff</Color>
 </ResourceDictionary>

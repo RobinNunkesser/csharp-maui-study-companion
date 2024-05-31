@@ -33,8 +33,13 @@ public partial class MensaPage : ContentPage
     {
         if (Settings.WelcomeStatus == (int)WelcomeStatusType.Unfinished)
         {
-            List<string> statusChoices = new List<string> { AppResources.Student, AppResources.Staff, AppResources.Guest };
-            string chosenStatus = await DisplayActionSheet(AppResources.StatusQuery, AppResources.Cancel, null, statusChoices.ToArray());
+            var statusChoices = new List<string> { AppResources.Student, AppResources.Staff, AppResources.Guest };
+            var chosenStatus = AppResources.Student;
+            // TODO: Remove this when DisplayActionSheet is working again on Mac Catalyst
+#if MACCATALYST
+#else            
+            chosenStatus = await DisplayActionSheet(AppResources.StatusQuery, AppResources.Cancel, null, statusChoices.ToArray());
+#endif
             if (!chosenStatus.Equals(AppResources.Cancel))
             {
                 Settings.WelcomeStatus = (int)WelcomeStatusType.Finished;

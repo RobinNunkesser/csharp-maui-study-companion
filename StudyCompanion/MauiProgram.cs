@@ -49,9 +49,9 @@ public static class MauiProgram
         this MauiAppBuilder mauiAppBuilder
     )
     {
-        mauiAppBuilder.Services.AddSingleton<QuizPage>();
+        mauiAppBuilder.Services.AddTransient<QuizPage>();
         mauiAppBuilder.Services.AddSingleton(new QuizViewModel(QuestionRepository.Questions));
-        mauiAppBuilder.Services.AddSingleton<QuizStatisticsPage>();
+        mauiAppBuilder.Services.AddTransient<QuizStatisticsPage>();
         mauiAppBuilder.Services.AddSingleton<MensaPage>();
         mauiAppBuilder.Services.AddSingleton<MensaViewModel>();
         mauiAppBuilder.Services.AddSingleton<CoursesPage>();

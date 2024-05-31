@@ -7,7 +7,7 @@
              Title="{x:Static localization:AppResources.Mensa}">
     <ContentPage.Resources>
 		<ResourceDictionary>
-			<local:PriceConverter x:Key="priceConverter" />            
+			<local:PriceConverter x:Key="PriceConverter" />            
 		</ResourceDictionary>
 	</ContentPage.Resources>
     <ContentPage.ToolbarItems>
@@ -45,7 +45,7 @@
                                FontAttributes="Bold" />
                         <Label Grid.Row="1"
                                Grid.Column="1" 
-                               Text="{Binding Price, Converter={StaticResource priceConverter}}"
+                               Text="{Binding Price, Converter={StaticResource PriceConverter}}"
                                FontAttributes="Italic" 
                                VerticalOptions="End" />
                     </Grid>
