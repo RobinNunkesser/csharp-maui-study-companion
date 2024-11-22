@@ -7,7 +7,7 @@ namespace StudyCompanion;
 public partial class MensaPage : ContentPage
 {
     private readonly IGetMealsService _service;
-    readonly MensaViewModel _viewModel;
+    private readonly MensaViewModel _viewModel;
 
     public MensaPage(MensaViewModel viewModel, IGetMealsService service)
     {
@@ -16,11 +16,12 @@ public partial class MensaPage : ContentPage
         _service = service;
     }
 
-    protected async override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
         try
         {
+            await Task.Delay(500);
             Success(await _service.Execute(new MealQuery() { Mensa = 35, Date = DateTime.Now }));
         }
         catch (Exception ex)
@@ -31,6 +32,7 @@ public partial class MensaPage : ContentPage
 
     private async void Success(List<IMealCollection> meals)
     {
+        await Task.Delay(500);
         if (Settings.WelcomeStatus == (int)WelcomeStatusType.Unfinished)
         {
             var statusChoices = new List<string> { AppResources.Student, AppResources.Staff, AppResources.Guest };
