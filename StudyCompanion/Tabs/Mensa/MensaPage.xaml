@@ -15,9 +15,12 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <CollectionView IsGrouped="true" ItemsSource="{Binding Meals}">
+            <CollectionView.EmptyView>
+                <ActivityIndicator IsRunning="True"/>
+            </CollectionView.EmptyView>
             <CollectionView.GroupHeaderTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding Header}" BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                    <Label Text="{Binding Header}" 
                        FontSize="Medium" FontAttributes="Bold" Padding="10"/>
                 </DataTemplate>
             </CollectionView.GroupHeaderTemplate>

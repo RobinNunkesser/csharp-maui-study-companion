@@ -22,7 +22,7 @@
         </CollectionView.Header>
             <CollectionView.GroupHeaderTemplate>
             <DataTemplate>
-                <Label Text="{Binding Header}" BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                <Label Text="{Binding Header}" 
                        FontAttributes="Bold" Padding="20,4,20,4"/>
             </DataTemplate>
         </CollectionView.GroupHeaderTemplate>

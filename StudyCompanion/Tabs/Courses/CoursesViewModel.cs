@@ -12,36 +12,36 @@ namespace StudyCompanion
 {
     public class CoursesViewModel
     {
-        private static readonly string shortFormat = "dd.MM.yyyy";
+        private const string ShortFormat = "dd.MM.yyyy";
 
-        public static DateTime SemesterEnd { get; } = DateTime.ParseExact("07.07.2024", shortFormat, CultureInfo.InvariantCulture);
+        public static DateTime SemesterEnd { get; } = DateTime.ParseExact("19.01.2025", ShortFormat, CultureInfo.InvariantCulture);
 
         public static List<DateTime> Holidays { get; } = new List<DateTime>
         {
-            /*DateTime.ParseExact("03.10.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("01.11.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("24.12.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("25.12.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("26.12.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("27.12.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("28.12.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("29.12.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("30.12.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("31.12.2023",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("01.01.2024",shortFormat, CultureInfo.InvariantCulture),*/
-            DateTime.ParseExact("01.04.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("02.04.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("03.04.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("04.04.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("05.04.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("01.05.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("09.05.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("20.05.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("21.05.2024",shortFormat, CultureInfo.InvariantCulture),
-            DateTime.ParseExact("30.05.2024",shortFormat, CultureInfo.InvariantCulture)
+            DateTime.ParseExact("03.10.2024",ShortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("01.11.2024",ShortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("24.12.2024",ShortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("25.12.2024",ShortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("26.12.2024",ShortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("27.12.2024",ShortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("28.12.2024",ShortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("29.12.2024",ShortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("30.12.2024",ShortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("31.12.2024",ShortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("01.01.2025",ShortFormat, CultureInfo.InvariantCulture),
+            /*DateTime.ParseExact("01.04.2025",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("02.04.2025",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("03.04.2025",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("04.04.2025",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("05.04.2025",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("01.05.2025",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("09.05.2025",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("20.05.2025",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("21.05.2025",shortFormat, CultureInfo.InvariantCulture),
+            DateTime.ParseExact("30.05.2025",shortFormat, CultureInfo.InvariantCulture)*/
         };
 
-        private readonly List<ICourse> courses;
+        private readonly List<ICourse> _courses;
         public SectionViewModel<ICourse>[]? GroupedCourses { get; set; }
 
         private readonly IGetCoursesService _service;
@@ -49,8 +49,8 @@ namespace StudyCompanion
         public CoursesViewModel(IGetCoursesService service)
         {
             _service = service;
-            courses = service.Execute();
-            SetGroupedCourses(_service.Execute());
+            _courses = service.Execute();
+            SetGroupedCourses(_courses);
         }
 
         public void Filter(string queryString)
@@ -60,7 +60,7 @@ namespace StudyCompanion
 
         private void SetGroupedCourses(List<ICourse> courses)
         {
-            SectionViewModel<ICourse>[] groups = new SectionViewModel<ICourse>[7];
+            var groups = new SectionViewModel<ICourse>[7];
             foreach (var group in courses.GroupBy(c => c.Semester))
             {
                 var section = new SectionViewModel<ICourse>()
@@ -80,13 +80,13 @@ namespace StudyCompanion
         {
 
             var normalizedQuery = queryString?.ToLower() ?? "";
-            if (string.IsNullOrEmpty(normalizedQuery)) return courses;
-            bool success = int.TryParse(normalizedQuery, out int semester);
+            if (string.IsNullOrEmpty(normalizedQuery)) return _courses;
+            var success = int.TryParse(normalizedQuery, out int semester);
             if (success)
             {
-                return courses.Where(item => item.Semester == semester).ToList();
+                return _courses.Where(item => item.Semester == semester).ToList();
             }
-            return courses.Where(
+            return _courses.Where(
                 item => item.Name.ToLower().Contains(normalizedQuery) ||
                 item.Lecturer.ToLower().Contains(normalizedQuery)).ToList();
         }
@@ -99,15 +99,7 @@ namespace StudyCompanion
 
             while (startDate < SemesterEnd)
             {
-                var isHoliday = false;
-                foreach (var holiday in Holidays)
-                {
-                    if (startDate.Date == holiday.Date)
-                    {
-                        isHoliday = true;
-                        break;
-                    }
-                }
+                var isHoliday = Holidays.Any(holiday => startDate.Date == holiday.Date);
 
                 if (!isHoliday) await CrossCalendars.Current.AddOrUpdateEventAsync(selectedCalendar, new CalendarEvent
                 {

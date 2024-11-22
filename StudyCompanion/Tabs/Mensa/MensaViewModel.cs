@@ -10,7 +10,7 @@ namespace StudyCompanion
 
     public class MensaViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<MealSectionViewModel> Meals { get; set; }
+        public List<MealSectionViewModel> Meals { get; set; }
 
         private MealSectionViewModel mainDishes;
         private MealSectionViewModel soups;
@@ -19,11 +19,12 @@ namespace StudyCompanion
 
         public MensaViewModel()
         {
+            Meals = new List<MealSectionViewModel>();
         }
 
         internal void SetMeals(List<IMealCollection> meals)
         {
-            Meals = new ObservableCollection<MealSectionViewModel>();
+            var receivedMeals = new List<MealSectionViewModel>();
             mainDishes = new MealSectionViewModel()
             {
                 Header = AppResources.Maindishes
@@ -40,10 +41,10 @@ namespace StudyCompanion
             {
                 Header = AppResources.Desserts
             };
-            Meals.Add(mainDishes);
-            Meals.Add(soups);
-            Meals.Add(sideDishes);
-            Meals.Add(desserts);
+            receivedMeals.Add(mainDishes);
+            receivedMeals.Add(soups);
+            receivedMeals.Add(sideDishes);
+            receivedMeals.Add(desserts);
             foreach (var mealCollection in meals)
             {
                 switch (mealCollection.Category)
@@ -80,7 +81,9 @@ namespace StudyCompanion
                         break;
                 }
             }
-            OnPropertyChanged("Meals");
+
+            Meals = receivedMeals;
+            OnPropertyChanged(nameof(Meals));
         }
 
         bool excludeMeal(IMeal meal)

@@ -7,7 +7,7 @@ namespace StudyCompanion
 {
     public partial class CoursesPage : ContentPage
     {
-        readonly CoursesViewModel _viewModel;
+        private readonly CoursesViewModel _viewModel;
 
         public CoursesPage(CoursesViewModel viewModel)
         {
