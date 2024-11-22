@@ -12,71 +12,67 @@ namespace StudyCompanion
     {
         public List<MealSectionViewModel> Meals { get; set; }
 
-        private MealSectionViewModel mainDishes;
-        private MealSectionViewModel soups;
-        private MealSectionViewModel sideDishes;
-        private MealSectionViewModel desserts;
+        private MealSectionViewModel _mainDishes;
+        private MealSectionViewModel _soups;
+        private MealSectionViewModel _sideDishes;
+        private MealSectionViewModel _desserts;
 
         public MensaViewModel()
         {
-            Meals = new List<MealSectionViewModel>();
+            Meals = [];
         }
 
         internal void SetMeals(List<IMealCollection> meals)
         {
             var receivedMeals = new List<MealSectionViewModel>();
-            mainDishes = new MealSectionViewModel()
+            _mainDishes = new MealSectionViewModel()
             {
                 Header = AppResources.Maindishes
             };
-            soups = new MealSectionViewModel()
+            _soups = new MealSectionViewModel()
             {
                 Header = AppResources.Soups
             };
-            sideDishes = new MealSectionViewModel()
+            _sideDishes = new MealSectionViewModel()
             {
                 Header = AppResources.Sidedishes
             };
-            desserts = new MealSectionViewModel()
+            _desserts = new MealSectionViewModel()
             {
                 Header = AppResources.Desserts
             };
-            receivedMeals.Add(mainDishes);
-            receivedMeals.Add(soups);
-            receivedMeals.Add(sideDishes);
-            receivedMeals.Add(desserts);
+            receivedMeals.Add(_mainDishes);
+            receivedMeals.Add(_soups);
+            receivedMeals.Add(_sideDishes);
+            receivedMeals.Add(_desserts);
             foreach (var mealCollection in meals)
             {
                 switch (mealCollection.Category)
                 {
                     case Category.Dessert:
-                        foreach (var meal in mealCollection.Meals)
+                        foreach (var meal in mealCollection.Meals.Where(meal => !ExcludeMeal(meal)))
                         {
-                            if (excludeMeal(meal)) continue;
-                            desserts.Add(meal);
+                            _desserts.Add(meal);
                         }
                         break;
                     case Category.Dish:
-                        foreach (var meal in mealCollection.Meals)
+                        foreach (var meal in mealCollection.Meals.Where(meal => !ExcludeMeal(meal)))
                         {
-                            if (excludeMeal(meal)) continue;
-                            mainDishes.Add(meal);
+                            _mainDishes.Add(meal);
                         }
                         break;
                     case Category.Soup:
-                        foreach (var meal in mealCollection.Meals)
+                        foreach (var meal in mealCollection.Meals.Where(meal => !ExcludeMeal(meal)))
                         {
-                            if (excludeMeal(meal)) continue;
-                            soups.Add(meal);
+                            _soups.Add(meal);
                         }
                         break;
                     case Category.None:
                     case Category.Sidedish:
                     default:
-                        foreach (var meal in mealCollection.Meals)
+                        foreach (var meal in mealCollection.Meals.Where(meal => !ExcludeMeal(meal)))
                         {
-                            if (excludeMeal(meal)) continue;
-                            sideDishes.Add(meal);
+                            _sideDishes.Add(meal);
                         }
                         break;
                 }
@@ -86,29 +82,11 @@ namespace StudyCompanion
             OnPropertyChanged(nameof(Meals));
         }
 
-        bool excludeMeal(IMeal meal)
+        private static bool ExcludeMeal(IMeal meal)
         {
-            var excludeMeal = false;
-            foreach (Allergens flagToCheck in Enum.GetValues(typeof(Allergens)))
-            {
-                if (flagToCheck != Allergens.None &&
-                    meal.Allergens.HasFlag(flagToCheck) &&
-                    !Settings.Allergens.HasFlag(flagToCheck))
-                {
-                    excludeMeal = true;
-                    break;
-                }
-            }
-            foreach (Additives flagToCheck in Enum.GetValues(typeof(Additives)))
-            {
-                if (flagToCheck != Additives.None &&
-                    meal.Additives.HasFlag(flagToCheck) &&
-                    !Settings.Additives.HasFlag(flagToCheck))
-                {
-                    excludeMeal = true;
-                    break;
-                }
-            }
+            var excludeMeal = Enum.GetValues(typeof(Allergens)).Cast<Allergens>().Any(flagToCheck => flagToCheck != Allergens.None && meal.Allergens.HasFlag(flagToCheck) && !Settings.Allergens.HasFlag(flagToCheck)) || Enum.GetValues(typeof(Additives)).Cast<Additives>().Any(flagToCheck => flagToCheck != Additives.None &&
+                meal.Additives.HasFlag(flagToCheck) &&
+                !Settings.Additives.HasFlag(flagToCheck));
             return excludeMeal;
         }
 
