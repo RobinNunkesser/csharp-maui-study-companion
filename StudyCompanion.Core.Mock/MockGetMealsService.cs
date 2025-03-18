@@ -23,6 +23,7 @@ namespace Italbytz.Adapters.Meal.Mock
                     Category = Category.Dessert,
                     Meals = Mocks.Desserts
                 }};
+            Task.Delay(500);
             return Task.FromResult(collectionsList);
         }
     }

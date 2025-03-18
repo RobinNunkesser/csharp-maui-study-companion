@@ -21,7 +21,6 @@ public partial class MensaPage : ContentPage
         base.OnAppearing();
         try
         {
-            await Task.Delay(500);
             Success(await _service.Execute(new MealQuery() { Mensa = 35, Date = DateTime.Now }));
         }
         catch (Exception ex)
@@ -32,7 +31,6 @@ public partial class MensaPage : ContentPage
 
     private async void Success(List<IMealCollection> meals)
     {
-        await Task.Delay(500);
         if (Settings.WelcomeStatus == (int)WelcomeStatusType.Unfinished)
         {
             var statusChoices = new List<string> { AppResources.Student, AppResources.Staff, AppResources.Guest };
