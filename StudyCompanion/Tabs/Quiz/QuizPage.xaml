@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:StudyCompanion"
@@ -7,11 +8,11 @@
              x:DataType="local:QuizViewModel"
              Title="{x:Static localization:AppResources.Quiz}">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="statistics" 
+        <ToolbarItem IconImageSource="statistics"
                      Clicked="Statistics_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <Grid>
+        <Grid Padding="16">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
@@ -22,25 +23,26 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.ColumnSpan="2" 
-                   Text="{Binding Question}" HorizontalOptions="Center" 
-                   VerticalOptions="Center" HorizontalTextAlignment="Center"/>
-            <Label Grid.Row="1" Grid.ColumnSpan="2" 
-                   x:Name="answerLabel" Text="{Binding Answer}" HorizontalOptions="Center" 
+            <Label Grid.Row="0" Grid.ColumnSpan="2"
+                   Text="{Binding Question}" HorizontalOptions="Center"
+                   VerticalOptions="Center" HorizontalTextAlignment="Center" />
+            <Label Grid.Row="1" Grid.ColumnSpan="2"
+                   x:Name="answerLabel" Text="{Binding Answer}"
+                   HorizontalOptions="Center"
                    VerticalOptions="Center" Opacity="0" />
-            <Button Grid.Row="2" Grid.Column="0" 
+            <Button Grid.Row="2" Grid.Column="0"
+                    Margin="4"
                     Text="{x:Static localization:AppResources.Wrong}"
-                    HorizontalOptions="Center" 
                     IsEnabled="{Binding ButtonsEnabled}"
-                    Clicked="Answer_Clicked"                    
+                    Clicked="Answer_Clicked"
                     Command="{Binding AnswerCommand}">
                 <Button.CommandParameter>
                     <x:Boolean>False</x:Boolean>
                 </Button.CommandParameter>
             </Button>
-            <Button Grid.Row="2" Grid.Column="1" 
+            <Button Grid.Row="2" Grid.Column="1"
+                    Margin="4"
                     Text="{x:Static localization:AppResources.Right}"
-                    HorizontalOptions="Center" 
                     IsEnabled="{Binding ButtonsEnabled}"
                     Clicked="Answer_Clicked"
                     Command="{Binding AnswerCommand}">
@@ -48,10 +50,12 @@
                     <x:Boolean>True</x:Boolean>
                 </Button.CommandParameter>
             </Button>
-            <Button Grid.Row="3" Grid.ColumnSpan="2" 
-                    Text="{x:Static localization:AppResources.Skip}" HorizontalOptions="Center" VerticalOptions="End" 
+            <Button Grid.Row="3" Grid.ColumnSpan="2"
+                    Margin="4"
+                    Text="{x:Static localization:AppResources.Skip}"
+                    VerticalOptions="End"
                     IsEnabled="{Binding ButtonsEnabled}"
-                    Command="{Binding SkipCommand}"/>
+                    Command="{Binding SkipCommand}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

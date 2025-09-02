@@ -1,59 +1,68 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:StudyCompanion"             
-             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"                          
+             xmlns:local="clr-namespace:StudyCompanion"
+             xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
              x:Class="StudyCompanion.MensaPage"
              Title="{x:Static localization:AppResources.Mensa}">
     <ContentPage.Resources>
-		<ResourceDictionary>
-			<local:PriceConverter x:Key="PriceConverter" />            
-		</ResourceDictionary>
-	</ContentPage.Resources>
+        <ResourceDictionary>
+            <local:PriceConverter x:Key="PriceConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Clicked="ToolbarItem_Clicked" IconImageSource="info_black_24dp.png" />
+        <ToolbarItem Clicked="ToolbarItem_Clicked"
+                     IconImageSource="info_black_24dp.png" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <CollectionView IsGrouped="true" ItemsSource="{Binding Meals}">
-            <CollectionView.EmptyView>
-                <ActivityIndicator IsRunning="True"/>
-            </CollectionView.EmptyView>
-            <CollectionView.GroupHeaderTemplate>
-                <DataTemplate>
-                    <Label Text="{Binding Header}" 
-                       FontSize="Medium" FontAttributes="Bold" Padding="10"/>
-                </DataTemplate>
-            </CollectionView.GroupHeaderTemplate>
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Padding="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Image Grid.RowSpan="2" 
-                               Source="{Binding Image}" 
-                               Aspect="AspectFill"
-                               HeightRequest="60" 
-                               WidthRequest="60"
-                               Margin="0,0,10,0"/>
-                        <Label Grid.Column="1" 
-                               Text="{Binding Name}"
-                               LineBreakMode="WordWrap"
-                               MaxLines="2"
-                               FontAttributes="Bold" />
-                        <Label Grid.Row="1"
-                               Grid.Column="1" 
-                               Text="{Binding Price, Converter={StaticResource PriceConverter}}"
-                               FontAttributes="Italic" 
-                               VerticalOptions="End" />
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+        <Grid
+            RowDefinitions="*"
+            ColumnDefinitions="*">
+            <CollectionView Grid.Row="0" IsGrouped="true"
+                            ItemsSource="{Binding Meals}"
+                            VerticalOptions="Fill">
+                <CollectionView.EmptyView>
+                    <ActivityIndicator IsRunning="True" />
+                </CollectionView.EmptyView>
+                <CollectionView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Header}"
+                               FontSize="Medium" FontAttributes="Bold"
+                               Padding="10" />
+                    </DataTemplate>
+                </CollectionView.GroupHeaderTemplate>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="2"
+                                   Source="{Binding Image}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="60"
+                                   WidthRequest="60"
+                                   Margin="0,0,10,0" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Name}"
+                                   LineBreakMode="WordWrap"
+                                   MaxLines="2"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding Price, Converter={StaticResource PriceConverter}}"
+                                   FontAttributes="Italic"
+                                   VerticalOptions="End" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

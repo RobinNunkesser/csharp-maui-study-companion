@@ -24,23 +24,25 @@ public class CoursesViewModel
     }
 
     public static DateTime SemesterEnd { get; } =
-        DateTime.ParseExact("29.06.2025", ShortFormat,
+        DateTime.ParseExact("18.01.2026", ShortFormat,
             CultureInfo.InvariantCulture);
 
     public static List<DateTime> Holidays { get; } = new()
     {
+
+        DateTime.ParseExact("03.10.2025",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("01.11.2025",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("24.12.2025",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("25.12.2025",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("26.12.2025",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("27.12.2025",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("28.12.2025",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("29.12.2025",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("30.12.2025",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("31.12.2025",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("01.01.2026",ShortFormat, CultureInfo.InvariantCulture),
+        DateTime.ParseExact("02.01.2026",ShortFormat, CultureInfo.InvariantCulture),
         /*
-        DateTime.ParseExact("03.10.2024",ShortFormat, CultureInfo.InvariantCulture),
-        DateTime.ParseExact("01.11.2024",ShortFormat, CultureInfo.InvariantCulture),
-        DateTime.ParseExact("24.12.2024",ShortFormat, CultureInfo.InvariantCulture),
-        DateTime.ParseExact("25.12.2024",ShortFormat, CultureInfo.InvariantCulture),
-        DateTime.ParseExact("26.12.2024",ShortFormat, CultureInfo.InvariantCulture),
-        DateTime.ParseExact("27.12.2024",ShortFormat, CultureInfo.InvariantCulture),
-        DateTime.ParseExact("28.12.2024",ShortFormat, CultureInfo.InvariantCulture),
-        DateTime.ParseExact("29.12.2024",ShortFormat, CultureInfo.InvariantCulture),
-        DateTime.ParseExact("30.12.2024",ShortFormat, CultureInfo.InvariantCulture),
-        DateTime.ParseExact("31.12.2024",ShortFormat, CultureInfo.InvariantCulture),
-        DateTime.ParseExact("01.01.2025",ShortFormat, CultureInfo.InvariantCulture),*/
         // Easter
         DateTime.ParseExact("18.04.2025", ShortFormat,
             CultureInfo.InvariantCulture),
@@ -67,7 +69,7 @@ public class CoursesViewModel
             CultureInfo.InvariantCulture),
         // Corpus Christi
         DateTime.ParseExact("19.06.2025", ShortFormat,
-            CultureInfo.InvariantCulture)
+            CultureInfo.InvariantCulture)*/
     };
 
     public SectionViewModel<ICourse>[]? GroupedCourses { get; set; }

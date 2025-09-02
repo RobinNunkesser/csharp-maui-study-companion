@@ -1,43 +1,52 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
              xmlns:local="clr-namespace:StudyCompanion"
-    x:Class="StudyCompanion.CoursesPage"
-    Title="{x:Static localization:AppResources.Courses}">
+             x:Class="StudyCompanion.CoursesPage"
+             Title="{x:Static localization:AppResources.Courses}">
     <ContentPage.Resources>
-		<ResourceDictionary>
-			<local:DateConverter x:Key="dateConverter" />
-		</ResourceDictionary>
-	</ContentPage.Resources>
+        <ResourceDictionary>
+            <local:DateConverter x:Key="dateConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <CollectionView x:Name="courses"
-                        SelectionMode="Single"
-                        SelectionChanged="OnCollectionViewSelectionChanged"
-                        IsGrouped="True"
-                        >
-        <CollectionView.Header>
+        <Grid
+            RowDefinitions="*"
+            ColumnDefinitions="*">
+
+            <CollectionView x:Name="courses"
+                            Grid.Row="0"
+                            SelectionMode="Single"
+                            SelectionChanged="OnCollectionViewSelectionChanged"
+                            IsGrouped="True"
+                            VerticalOptions="Fill">
+                <!--<CollectionView.Header>
             <SearchBar x:Name="MainSearchBar" Placeholder="{x:Static localization:AppResources.SearchTerm}" 
                        TextChanged="OnSearchTextChanged"/>
-        </CollectionView.Header>
-            <CollectionView.GroupHeaderTemplate>
-            <DataTemplate>
-                <Label Text="{Binding Header}" 
-                       FontAttributes="Bold" Padding="20,4,20,4"/>
-            </DataTemplate>
-        </CollectionView.GroupHeaderTemplate>
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand"
-                                         Padding="20,8,20,8">
-                    <Label Text="{Binding Name}" FontAttributes="Bold" />
-                    <Label Text="{Binding Detail}" FontAttributes="Italic"
-                           VerticalOptions="End" />
-                    <Label Text="{Binding StartDate, Converter={StaticResource dateConverter}}"/>
-                </StackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+        </CollectionView.Header>-->
+                <CollectionView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Header}"
+                               FontAttributes="Bold" Padding="20,4,20,4" />
+                    </DataTemplate>
+                </CollectionView.GroupHeaderTemplate>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Vertical"
+                                     VerticalOptions="FillAndExpand"
+                                     Padding="20,8,20,8">
+                            <Label Text="{Binding Name}" FontAttributes="Bold" />
+                            <Label Text="{Binding Detail}"
+                                   FontAttributes="Italic"
+                                   VerticalOptions="End" />
+                            <Label
+                                Text="{Binding StartDate, Converter={StaticResource dateConverter}}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
-
