@@ -1,5 +1,5 @@
 ﻿using System;
-using Italbytz.Ports.Meal;
+using Italbytz.Meal.Abstractions;
 
 namespace StudyCompanion
 {

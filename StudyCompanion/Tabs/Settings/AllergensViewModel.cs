@@ -1,4 +1,4 @@
-﻿using Italbytz.Ports.Meal;
+﻿using Italbytz.Meal.Abstractions;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 

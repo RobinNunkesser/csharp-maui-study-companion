@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Italbytz.Adapters.Meal.OpenMensa;
-using Italbytz.Ports.Meal;
+using Italbytz.Meal.Abstractions;
 
 namespace Italbytz.Adapters.Meal.Mock
 {

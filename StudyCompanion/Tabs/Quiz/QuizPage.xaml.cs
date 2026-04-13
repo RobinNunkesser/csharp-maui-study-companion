@@ -1,4 +1,4 @@
-﻿using Italbytz.Ports.Trivia;
+﻿using Italbytz.Exam.Trivia.Abstractions;
 
 namespace StudyCompanion;
 

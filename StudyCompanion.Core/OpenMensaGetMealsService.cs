@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Italbytz.Ports.Common;
-using Italbytz.Ports.Meal;
+using Italbytz.Common.Abstractions;
+using Italbytz.Meal.Abstractions;
 
 namespace Italbytz.Adapters.Meal.OpenMensa
 {

@@ -1,5 +1,5 @@
 ﻿using System;
-using Italbytz.Ports.Trivia;
+using Italbytz.Exam.Trivia.Abstractions;
 using StudyCompanion.Ports;
 
 namespace StudyCompanion

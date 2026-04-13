@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Italbytz.Ports.Common;
+using Italbytz.Common.Abstractions;
 using StudyCompanion.Ports;
 
 namespace StudyCompanion.Core.Mock
