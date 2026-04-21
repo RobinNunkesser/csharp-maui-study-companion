@@ -1,5 +1,5 @@
 ﻿using System;
-using Italbytz.Meal.Abstractions;
+using Italbytz.Ports.Meal;
 
 namespace Italbytz.Adapters.Meal.OpenMensa
 {
