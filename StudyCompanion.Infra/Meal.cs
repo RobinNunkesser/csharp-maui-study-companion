@@ -15,6 +15,8 @@ namespace Italbytz.Adapters.Meal.OpenMensa
         public Additives Additives { get; set; }
         public Category Category { get; set; }
         public IPrice Price { get; set; }
+        public Badge[] Badges { get; set; } = new Badge[0];
+        public DateTime Date { get; set; }
     }
 }
 
