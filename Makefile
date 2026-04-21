@@ -4,10 +4,10 @@ PROJECT := StudyCompanion/StudyCompanion.csproj
 CONFIG ?= Debug
 DOTNET ?= $(shell /bin/sh -c 'command -v dotnet 2>/dev/null || echo /usr/local/share/dotnet/dotnet')
 
-TFM_MACCATALYST := net9.0-maccatalyst
-TFM_ANDROID := net9.0-android
-TFM_IOS := net9.0-ios
-TFM_WINDOWS := net9.0-windows10.0.19041.0
+TFM_MACCATALYST := net10.0-maccatalyst
+TFM_ANDROID := net10.0-android
+TFM_IOS := net10.0-ios
+TFM_WINDOWS := net10.0-windows10.0.19041.0
 
 # Optional: for iOS run target, e.g. IOS_DEVICE=:v2:udid=YOUR_SIMULATOR_UDID
 IOS_DEVICE ?=
