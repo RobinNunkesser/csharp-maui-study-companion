@@ -168,6 +168,9 @@
 	<data name="MensaInfo" xml:space="preserve">
     <value>Ingredients/Nutritional information is available at Studierendenwerk Paderborn's web page.</value>
   </data>
+	<data name="MensaClosedToday" xml:space="preserve">
+    <value>Mensa closed today – showing next available day</value>
+  </data>
 	<data name="IOSPermissions" xml:space="preserve">
     <value>Please allow calendar access in the Settings app.</value>
   </data>

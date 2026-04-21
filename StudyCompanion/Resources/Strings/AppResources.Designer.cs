@@ -771,6 +771,15 @@ namespace StudyCompanion.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mensa closed today – showing next available day.
+        /// </summary>
+        internal static string MensaClosedToday {
+            get {
+                return ResourceManager.GetString("MensaClosedToday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Minimum Spanning Tree.
         /// </summary>
         internal static string MST {

@@ -168,6 +168,9 @@
 	<data name="MensaInfo" xml:space="preserve">
     <value>Weitere Informationen zu Inhaltsstoffen und Nährwerten gibt es auf der Webseite des Studierendenwerks Paderborn.</value>
   </data>
+	<data name="MensaClosedToday" xml:space="preserve">
+    <value>Mensa heute geschlossen – nächster Öffnungstag</value>
+  </data>
 	<data name="IOSPermissions" xml:space="preserve">
     <value>Bitte erlaube Kalenderzugriff in der Einstellungsapp.</value>
   </data>
