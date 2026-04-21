@@ -1,11 +1,11 @@
 ﻿using Italbytz.Adapters.Meal.Mock;
-using Italbytz.Meal.Abstractions;
+using Italbytz.Ports.Meal;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Italbytz.Adapters.Meal.OpenMensa;
 using StudyCompanion.Core.Mock;
 using StudyCompanion.Ports;
-using Italbytz.Exam.Trivia.Abstractions;
+using Italbytz.Ports.Trivia;
 
 namespace StudyCompanion;
 

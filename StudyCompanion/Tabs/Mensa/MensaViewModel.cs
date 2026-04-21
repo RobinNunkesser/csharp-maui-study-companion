@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Italbytz.Meal.Abstractions;
+using Italbytz.Ports.Meal;
 using StudyCompanion.Resources.Strings;
 
 namespace StudyCompanion

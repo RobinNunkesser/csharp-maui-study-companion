@@ -2,8 +2,8 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using Italbytz.Common.Random;
-using Italbytz.Exam.Trivia.Abstractions;
+
+using Italbytz.Ports.Trivia;
 
 namespace StudyCompanion
 {

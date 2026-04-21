@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Globalization;
-using Italbytz.Meal.Abstractions;
+using Italbytz.Ports.Meal;
 
 namespace StudyCompanion
 {

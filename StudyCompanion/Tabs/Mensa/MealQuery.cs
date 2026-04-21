@@ -1,4 +1,4 @@
-﻿using Italbytz.Meal.Abstractions;
+﻿using Italbytz.Ports.Meal;
 
 namespace StudyCompanion
 {
