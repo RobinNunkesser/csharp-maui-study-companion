@@ -9,6 +9,8 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:PriceConverter x:Key="PriceConverter" />
+            <local:BadgesTextConverter x:Key="BadgesTextConverter" />
+            <local:BadgesVisibleConverter x:Key="BadgesVisibleConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
@@ -16,53 +18,69 @@
                      IconImageSource="info_black_24dp.png" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <Grid
-            RowDefinitions="*"
-            ColumnDefinitions="*">
-            <CollectionView Grid.Row="0" IsGrouped="true"
-                            ItemsSource="{Binding Meals}"
-                            VerticalOptions="Fill">
-                <CollectionView.EmptyView>
-                    <ActivityIndicator IsRunning="True" />
-                </CollectionView.EmptyView>
-                <CollectionView.GroupHeaderTemplate>
-                    <DataTemplate>
+        <CollectionView IsGrouped="true"
+                        ItemsSource="{Binding Meals}"
+                        VerticalOptions="Fill">
+            <CollectionView.EmptyView>
+                <ActivityIndicator IsRunning="True" />
+            </CollectionView.EmptyView>
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Grid Padding="16,20,16,6">
                         <Label Text="{Binding Header}"
-                               FontSize="Medium" FontAttributes="Bold"
-                               Padding="10" />
-                    </DataTemplate>
-                </CollectionView.GroupHeaderTemplate>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               CharacterSpacing="1.5"
+                               TextTransform="Uppercase"
+                               TextColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryDark}}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="12,4"
+                            Padding="0"
+                            StrokeShape="RoundRectangle 14"
+                            StrokeThickness="1"
+                            Stroke="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray600}}"
+                            BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}">
+                        <Grid Padding="12" ColumnSpacing="14">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="68" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Image Grid.RowSpan="2"
-                                   Source="{Binding Image}"
-                                   Aspect="AspectFill"
-                                   HeightRequest="60"
-                                   WidthRequest="60"
-                                   Margin="0,0,10,0" />
-                            <Label Grid.Column="1"
-                                   Text="{Binding Name}"
-                                   LineBreakMode="WordWrap"
-                                   MaxLines="2"
-                                   FontAttributes="Bold" />
-                            <Label Grid.Row="1"
-                                   Grid.Column="1"
-                                   Text="{Binding Price, Converter={StaticResource PriceConverter}}"
-                                   FontAttributes="Italic"
-                                   VerticalOptions="End" />
+                            <Border Grid.Column="0"
+                                    StrokeShape="RoundRectangle 10"
+                                    StrokeThickness="0"
+                                    HeightRequest="68"
+                                    WidthRequest="68"
+                                    BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray600}}">
+                                <Image Source="{Binding Image}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="68"
+                                       WidthRequest="68" />
+                            </Border>
+                            <VerticalStackLayout Grid.Column="1"
+                                                 Spacing="6"
+                                                 VerticalOptions="Center">
+                                <Label Text="{Binding Name}"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       LineBreakMode="WordWrap"
+                                       MaxLines="3" />
+                                <Label Text="{Binding Price, Converter={StaticResource PriceConverter}}"
+                                       FontSize="13"
+                                       FontAttributes="Bold"
+                                       TextColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryDark}}" />
+                                <Label Text="{Binding Badges, Converter={StaticResource BadgesTextConverter}}"
+                                       IsVisible="{Binding Badges, Converter={StaticResource BadgesVisibleConverter}}"
+                                       FontSize="11"
+                                       TextColor="{AppThemeBinding Light={StaticResource Tertiary}, Dark={StaticResource PrimaryDark}}" />
+                            </VerticalStackLayout>
                         </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage.Content>
 </ContentPage>

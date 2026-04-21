@@ -1,5 +1,6 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 using Italbytz.Ports.Meal;
 using StudyCompanion.Resources.Strings;
@@ -10,16 +11,38 @@ namespace StudyCompanion
 
     public class MensaViewModel : INotifyPropertyChanged
     {
-        public List<MealSectionViewModel> Meals { get; set; }
+        public List<MealSectionViewModel> Meals { get; set; } = [];
 
-        private MealSectionViewModel _mainDishes;
-        private MealSectionViewModel _soups;
-        private MealSectionViewModel _sideDishes;
-        private MealSectionViewModel _desserts;
+        private MealSectionViewModel _mainDishes = new();
+        private MealSectionViewModel _soups = new();
+        private MealSectionViewModel _sideDishes = new();
+        private MealSectionViewModel _desserts = new();
+
+        private DateTime? _mealDate;
+
+        public DateTime? MealDate
+        {
+            get => _mealDate;
+            private set
+            {
+                _mealDate = value;
+                OnPropertyChanged(nameof(MealDate));
+                OnPropertyChanged(nameof(HasMealDate));
+                OnPropertyChanged(nameof(MealDateText));
+                OnPropertyChanged(nameof(IsFutureDate));
+            }
+        }
+
+        public bool HasMealDate => _mealDate.HasValue;
+
+        public bool IsFutureDate => _mealDate.HasValue && _mealDate.Value.Date != DateTime.Today;
+
+        public string MealDateText => _mealDate.HasValue
+            ? _mealDate.Value.ToString("dddd, d. MMMM yyyy", CultureInfo.CurrentCulture)
+            : string.Empty;
 
         public MensaViewModel()
         {
-            Meals = [];
         }
 
         internal void SetMeals(List<IMealCollection> meals)
@@ -80,6 +103,15 @@ namespace StudyCompanion
 
             Meals = receivedMeals;
             OnPropertyChanged(nameof(Meals));
+
+            var firstMealDate = meals
+                .SelectMany(c => c.Meals)
+                .Select(m => m.Date)
+                .Where(d => d != DateTime.MinValue)
+                .OrderBy(d => d)
+                .Cast<DateTime?>()
+                .FirstOrDefault();
+            MealDate = firstMealDate;
         }
 
         private static bool ExcludeMeal(IMeal meal)
