@@ -9,5 +9,7 @@ namespace Italbytz.Ports.Meal
         Allergens Allergens { get; set; }
         Additives Additives { get; set; }
         Category Category { get; set; }
+        Badge[] Badges { get; set; }
+        DateTime Date { get; set; }
     }
 }
