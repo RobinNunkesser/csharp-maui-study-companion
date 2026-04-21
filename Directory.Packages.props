@@ -1,0 +1,23 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Italbytz Domain Packages -->
+    <PackageVersion Include="Italbytz.Meal.Abstractions" Version="1.0.0" />
+    <PackageVersion Include="Italbytz.Meal.STWPB" Version="1.0.0" />
+    <PackageVersion Include="Italbytz.Trivia.Abstractions" Version="1.0.0" />
+    <PackageVersion Include="Italbytz.Trivia.OpenTriviaDb" Version="1.0.0" />
+
+    <!-- Microsoft MAUI & Core -->
+    <PackageVersion Include="Microsoft.Maui.Controls" Version="10.0.20" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="10.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.1" />
+
+    <!-- System Packages -->
+    <PackageVersion Include="System.Text.Json" Version="8.0.5" />
+    <PackageVersion Include="System.Net.Http" Version="4.3.4" />
+    <PackageVersion Include="System.Net.Http.Json" Version="7.0.0" />
+  </ItemGroup>
+</Project>

@@ -36,7 +36,7 @@ public static class MauiProgram
                 break;
             case Environment.Staging:
             case Environment.Production:
-                builder.Services.AddSingleton<IGetMealsService>(new OpenMensaGetMealsService(new OpenMensaMealDataSource(35, DateTime.Now)));
+                builder.Services.AddSingleton<IGetMealsService, OpenMensaGetMealsService>();
                 builder.Services.AddSingleton<IGetCoursesService, MockGetCoursesService>();
                 break;
             default:
