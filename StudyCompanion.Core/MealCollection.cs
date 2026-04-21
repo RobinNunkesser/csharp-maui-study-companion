@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Italbytz.Meal.Abstractions;
+using Italbytz.Ports.Meal;
 
 namespace Italbytz.Adapters.Meal
 {
