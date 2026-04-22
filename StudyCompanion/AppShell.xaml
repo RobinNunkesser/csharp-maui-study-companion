@@ -5,25 +5,23 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:StudyCompanion"
     xmlns:localization="clr-namespace:StudyCompanion.Resources.Strings"
-    Shell.FlyoutBehavior="Disabled">
-    
-    <TabBar>
-        <Tab Title="{x:Static localization:AppResources.Mensa}" Icon="mensa">
-            <ShellContent ContentTemplate="{DataTemplate local:MensaPage}" />
-        </Tab>
-        <Tab Title="{x:Static localization:AppResources.Quiz}" Icon="quiz">
-            <ShellContent ContentTemplate="{DataTemplate local:QuizPage}" />
-        </Tab>
-        <Tab Title="{x:Static localization:AppResources.Courses}" Icon="courses">
-            <ShellContent ContentTemplate="{DataTemplate local:CoursesPage}" />
-        </Tab>
-        <Tab Title="{x:Static localization:AppResources.Profs}" Icon="profs">
-            <ShellContent ContentTemplate="{DataTemplate local:ProfsPage}" />
-        </Tab>
-        <Tab Title="{x:Static localization:AppResources.Settings}" Icon="settings">
-            <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
-        </Tab>
-    </TabBar>
+    Shell.FlyoutBehavior="Flyout">
+
+    <FlyoutItem Title="{x:Static localization:AppResources.Mensa}" Icon="mensa.svg">
+        <ShellContent ContentTemplate="{DataTemplate local:MensaPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{x:Static localization:AppResources.Quiz}" Icon="quiz.svg">
+        <ShellContent ContentTemplate="{DataTemplate local:QuizPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{x:Static localization:AppResources.Courses}" Icon="courses.svg">
+        <ShellContent ContentTemplate="{DataTemplate local:CoursesPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{x:Static localization:AppResources.Profs}" Icon="profs.svg">
+        <ShellContent ContentTemplate="{DataTemplate local:ProfsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{x:Static localization:AppResources.Settings}" Icon="settings.svg">
+        <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
+    </FlyoutItem>
 
 </Shell>
 
