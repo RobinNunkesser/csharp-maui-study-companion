@@ -20,10 +20,17 @@ namespace Italbytz.Adapters.Meal.Mock
                     Meals = Mocks.Dishes
                 },
                 new MealCollection() {
+                    Category = Category.Soup,
+                    Meals = Mocks.Soups
+                },
+                new MealCollection() {
+                    Category = Category.Sidedish,
+                    Meals = Mocks.SideDishes
+                },
+                new MealCollection() {
                     Category = Category.Dessert,
                     Meals = Mocks.Desserts
                 }};
-            Task.Delay(500);
             return Task.FromResult(collectionsList);
         }
     }
