@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="18" fill="#fee2e2"/>
+  <ellipse cx="64" cy="66" rx="42" ry="30" fill="#fb7185"/>
+  <circle cx="50" cy="62" r="7" fill="#fff1f2"/>
+  <circle cx="78" cy="72" r="6" fill="#fff1f2"/>
+  <text x="64" y="116" text-anchor="middle" font-family="Verdana, sans-serif" font-size="12" fill="#9f1239">CHICKEN</text>
+</svg>
