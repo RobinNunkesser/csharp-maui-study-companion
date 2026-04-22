@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="18" fill="#dcfce7"/>
+  <rect x="26" y="34" width="76" height="58" rx="14" fill="#65a30d"/>
+  <circle cx="44" cy="53" r="5" fill="#fef08a"/>
+  <circle cx="64" cy="63" r="5" fill="#fef08a"/>
+  <circle cx="84" cy="52" r="5" fill="#fef08a"/>
+  <text x="64" y="116" text-anchor="middle" font-family="Verdana, sans-serif" font-size="12" fill="#14532d">BULGUR</text>
+</svg>
