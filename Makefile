@@ -17,8 +17,8 @@ JAVA_SDK_DIR ?=
 ANDROID_JAVA_ARG := $(if $(JAVA_SDK_DIR),-p:JavaSdkDirectory=$(JAVA_SDK_DIR),)
 
 .PHONY: help restore test clean \
-	build build-maccatalyst build-android build-ios build-windows \
-	run-maccatalyst run-android run-ios
+	build build-maccatalyst build-maccatalyst-release build-android build-ios build-windows \
+	run-maccatalyst run-maccatalyst-release run-android run-ios
 
 help:
 	@echo "Study Companion MAUI targets"
@@ -31,12 +31,14 @@ help:
 	@echo "Build:"
 	@echo "  make build                    # builds solution default"
 	@echo "  make build-maccatalyst"
+	@echo "  make build-maccatalyst-release"
 	@echo "  make build-android            # optional JAVA_SDK_DIR"
 	@echo "  make build-ios"
 	@echo "  make build-windows            # only works on Windows"
 	@echo ""
 	@echo "Run:"
 	@echo "  make run-maccatalyst"
+	@echo "  make run-maccatalyst-release"
 	@echo "  make run-android              # device/emulator required"
 	@echo "  make run-ios IOS_DEVICE=:v2:udid=<SIM_UDID>"
 
@@ -56,6 +58,9 @@ build:
 build-maccatalyst:
 	$(DOTNET) build $(PROJECT) -f $(TFM_MACCATALYST) -c $(CONFIG)
 
+build-maccatalyst-release:
+	$(DOTNET) build $(PROJECT) -f $(TFM_MACCATALYST) -c Release
+
 build-android:
 	$(DOTNET) build $(PROJECT) -f $(TFM_ANDROID) -c $(CONFIG) $(ANDROID_JAVA_ARG)
 
@@ -66,7 +71,20 @@ build-windows:
 	$(DOTNET) build $(PROJECT) -f $(TFM_WINDOWS) -c $(CONFIG)
 
 run-maccatalyst:
-	$(DOTNET) build $(PROJECT) -t:Run -f $(TFM_MACCATALYST) -c $(CONFIG)
+	$(DOTNET) build $(PROJECT) -f $(TFM_MACCATALYST) -c $(CONFIG)
+	@APP_PATH=$$(find StudyCompanion/bin/$(CONFIG)/$(TFM_MACCATALYST) -type d -name "StudyCompanion.app" | head -n 1); \
+	if [ -z "$$APP_PATH" ]; then \
+		echo "Konnte StudyCompanion.app nicht finden (Build-Ausgabe fehlt)."; \
+		exit 1; \
+	fi; \
+	open "$$APP_PATH" || { \
+		echo "App wurde gebaut, aber macOS konnte sie nicht starten. Pfad: $$APP_PATH"; \
+		echo "Starte sie ggf. manuell mit: open \"$$APP_PATH\""; \
+		exit 1; \
+	}
+
+run-maccatalyst-release:
+	$(MAKE) run-maccatalyst CONFIG=Release
 
 run-android:
 	$(DOTNET) build $(PROJECT) -t:Run -f $(TFM_ANDROID) -c $(CONFIG) $(ANDROID_JAVA_ARG)

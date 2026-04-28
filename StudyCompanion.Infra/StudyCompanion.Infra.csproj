@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	  <LangVersion>9.0</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	  <LangVersion>9.0</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="System.Text.Json" />
+	  <None Remove="System.Net.Http" />
+	  <None Remove="System.Net.Http.Json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="System.Text.Json"/>
+	  <PackageReference Include="System.Net.Http"/>
+	  <PackageReference Include="System.Net.Http.Json"/>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\StudyCompanion.Ports\StudyCompanion.Ports.csproj" />
+	</ItemGroup>
+</Project>
